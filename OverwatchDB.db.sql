@@ -43,4 +43,14 @@ INSERT INTO `Heros` VALUES (25,'Soldier: 76',2,200,0,0,1);
 INSERT INTO `Heros` VALUES (26,'Reaper',2,250,0,0,1);
 INSERT INTO `Heros` VALUES (27,'Pharah',2,200,0,0,1);
 INSERT INTO `Heros` VALUES (28,'Widowmaker',2,200,0,0,2);
+CREATE TABLE IF NOT EXISTS `Events` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT UNIQUE
+);
+INSERT INTO `Events` VALUES (1,'Winter Wonderland');
+INSERT INTO `Events` VALUES (2,'Halloween Terror');
+INSERT INTO `Events` VALUES (3,'Summer Games');
+INSERT INTO `Events` VALUES (4,'Aniversary');
+INSERT INTO `Events` VALUES (5,'Lunar New Year');
+INSERT INTO `Events` VALUES (6,'Archives');
 COMMIT;
