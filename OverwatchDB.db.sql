@@ -36,7 +36,7 @@ INSERT INTO `Heros` VALUES (18,'Hanzo',2,200,0,0,3);
 INSERT INTO `Heros` VALUES (19,'Junkrat',2,200,0,0,2);
 INSERT INTO `Heros` VALUES (20,'McCree',2,200,0,0,2);
 INSERT INTO `Heros` VALUES (21,'Symmetra',2,100,0,100,2);
-INSERT INTO `Heros` VALUES (22,'Tornjorn',2,200,0,0,2);
+INSERT INTO `Heros` VALUES (22,'Torbjörn',2,200,0,0,2);
 INSERT INTO `Heros` VALUES (23,'Tracer',2,150,0,0,2);
 INSERT INTO `Heros` VALUES (24,'Sombra',2,200,0,0,3);
 INSERT INTO `Heros` VALUES (25,'Soldier: 76',2,200,0,0,1);
