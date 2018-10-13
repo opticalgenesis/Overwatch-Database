@@ -19,6 +19,13 @@ CREATE TABLE IF NOT EXISTS `Itemkinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
+INSERT INTO `Itemkinds` VALUES (1,'Skin');
+INSERT INTO `Itemkinds` VALUES (2,'Highlight Intro');
+INSERT INTO `Itemkinds` VALUES (3,'Victory Pose');
+INSERT INTO `Itemkinds` VALUES (4,'Emote');
+INSERT INTO `Itemkinds` VALUES (5,'Voice Line');
+INSERT INTO `Itemkinds` VALUES (6,'Spray');
+INSERT INTO `Itemkinds` VALUES (7,'Player Icon');
 CREATE TABLE IF NOT EXISTS `ItemRarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
