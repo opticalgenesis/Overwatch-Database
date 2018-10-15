@@ -1,3 +1,3 @@
 # Overwatch Item Database
 
-Simple SQLite database containing all items available in Overwatch.
+Simple SQLite database of everything in Overwatch.
