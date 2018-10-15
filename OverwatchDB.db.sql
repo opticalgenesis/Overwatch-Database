@@ -8,8 +8,23 @@ INSERT INTO `Roles` VALUES (2,'Damage');
 INSERT INTO `Roles` VALUES (3,'Tank');
 CREATE TABLE IF NOT EXISTS `OverwatchLeagueTeams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`Name`	TEXT
+	`city`	TEXT NOT NULL,
+	`name`	TEXT NOT NULL UNIQUE,
+	`country`	TEXT NOT NULL,
+	`Division`	INTEGER
 );
+INSERT INTO `OverwatchLeagueTeams` VALUES (1,'London','Spitfire','England','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (2,'Shanghai','Dragons','China','Pacific');
+INSERT INTO `OverwatchLeagueTeams` VALUES (3,'Philadelphia ','Fusion','United States','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (4,'Los Angeles ','Valiant','United States','Pacific');
+INSERT INTO `OverwatchLeagueTeams` VALUES (5,'Houston','Outlaws','United States','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (6,'New York','Excelsior','United States','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (7,'Dallas','Fuel','United States','Pacific');
+INSERT INTO `OverwatchLeagueTeams` VALUES (8,'Seoul','Dynasty','South Korea','Pacific');
+INSERT INTO `OverwatchLeagueTeams` VALUES (9,'Florida','Mayhem','United States','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (10,'Boston','Uprising','United States','Atlantic');
+INSERT INTO `OverwatchLeagueTeams` VALUES (11,'San Francisco','Shock','United States','Pacific');
+INSERT INTO `OverwatchLeagueTeams` VALUES (12,'Los Angeles','Gladiators','United States','Pacific');
 CREATE TABLE IF NOT EXISTS `Items` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT NOT NULL,
