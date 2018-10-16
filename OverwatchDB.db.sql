@@ -1,4 +1,22 @@
 BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS `Overwatch_Players` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`nickname`	TEXT NOT NULL UNIQUE,
+	`first_name`	TEXT NOT NULL,
+	`last_name`	TEXT NOT NULL,
+	`primary_role`	TEXT NOT NULL,
+	`nationality`	TEXT NOT NULL,
+	`dpi`	INTEGER,
+	`sens`	INTEGER,
+	`scope_sens`	INTEGER,
+	`signature_hero`	INTEGER,
+	`owl_team`	INTEGER
+);
+INSERT INTO `Overwatch_Players` VALUES (1,'Taimou','Timo','Kettunen','2','Finnish',800,5,NULL,28,7);
+INSERT INTO `Overwatch_Players` VALUES (2,'FitzyHere','','','2','',NULL,NULL,NULL,24,NULL);
+INSERT INTO `Overwatch_Players` VALUES (3,'Codey','','','2','',800,3.5,NULL,24,NULL);
+INSERT INTO `Overwatch_Players` VALUES (4,'Mightty','Dan','','2','',NULL,NULL,NULL,24,NULL);
+INSERT INTO `Overwatch_Players` VALUES (5,'ml7','','','1','',800,7,50,1,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
