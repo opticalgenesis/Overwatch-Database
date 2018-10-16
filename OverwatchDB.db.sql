@@ -1,30 +1,52 @@
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS `Roles` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT NOT NULL UNIQUE
-);
-INSERT INTO `Roles` VALUES (1,'Support');
-INSERT INTO `Roles` VALUES (2,'Damage');
-INSERT INTO `Roles` VALUES (3,'Tank');
-CREATE TABLE IF NOT EXISTS `OverwatchLeagueTeams` (
+CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
 	`name`	TEXT NOT NULL UNIQUE,
 	`country`	TEXT NOT NULL,
 	`Division`	INTEGER
 );
-INSERT INTO `OverwatchLeagueTeams` VALUES (1,'London','Spitfire','England','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (2,'Shanghai','Dragons','China','Pacific');
-INSERT INTO `OverwatchLeagueTeams` VALUES (3,'Philadelphia ','Fusion','United States','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (4,'Los Angeles ','Valiant','United States','Pacific');
-INSERT INTO `OverwatchLeagueTeams` VALUES (5,'Houston','Outlaws','United States','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (6,'New York','Excelsior','United States','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (7,'Dallas','Fuel','United States','Pacific');
-INSERT INTO `OverwatchLeagueTeams` VALUES (8,'Seoul','Dynasty','South Korea','Pacific');
-INSERT INTO `OverwatchLeagueTeams` VALUES (9,'Florida','Mayhem','United States','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (10,'Boston','Uprising','United States','Atlantic');
-INSERT INTO `OverwatchLeagueTeams` VALUES (11,'San Francisco','Shock','United States','Pacific');
-INSERT INTO `OverwatchLeagueTeams` VALUES (12,'Los Angeles','Gladiators','United States','Pacific');
+INSERT INTO `Overwatch_League_Teams` VALUES (1,'1','Spitfire','3',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (2,'2','Dragons','4',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (3,'3','Fusion','1',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (4,'4','Valiant','1',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (5,'5','Outlaws','1',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (6,'6','Excelsior','1',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (7,'7','Fuel','1',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (8,'8','Dynasty','2',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
+INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
+CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Overwatch_League_Divisions` VALUES (1,'Pacific');
+INSERT INTO `Overwatch_League_Divisions` VALUES (2,'Atlantic');
+CREATE TABLE IF NOT EXISTS `Overwatch_League_Countries` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Overwatch_League_Countries` VALUES (1,'United States');
+INSERT INTO `Overwatch_League_Countries` VALUES (2,'South Korea');
+INSERT INTO `Overwatch_League_Countries` VALUES (3,'England');
+INSERT INTO `Overwatch_League_Countries` VALUES (4,'China');
+CREATE TABLE IF NOT EXISTS `Overwatch_League_Cities` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Overwatch_League_Cities` VALUES (1,'London');
+INSERT INTO `Overwatch_League_Cities` VALUES (2,'Shanghai');
+INSERT INTO `Overwatch_League_Cities` VALUES (3,'Philadelphia ');
+INSERT INTO `Overwatch_League_Cities` VALUES (4,'Los Angeles ');
+INSERT INTO `Overwatch_League_Cities` VALUES (5,'Houston');
+INSERT INTO `Overwatch_League_Cities` VALUES (6,'New York');
+INSERT INTO `Overwatch_League_Cities` VALUES (7,'Dallas');
+INSERT INTO `Overwatch_League_Cities` VALUES (8,'Seoul');
+INSERT INTO `Overwatch_League_Cities` VALUES (9,'Florida');
+INSERT INTO `Overwatch_League_Cities` VALUES (10,'Boston');
+INSERT INTO `Overwatch_League_Cities` VALUES (11,'San Francisco');
 CREATE TABLE IF NOT EXISTS `Items` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT NOT NULL,
@@ -57,27 +79,41 @@ INSERT INTO `Items` VALUES (20,'Seated',1,3,2,NULL,NULL);
 INSERT INTO `Items` VALUES (21,'R.I.P.',1,3,2,2,2016);
 INSERT INTO `Items` VALUES (22,'Toast',1,3,2,1,2016);
 INSERT INTO `Items` VALUES (23,'Folden Hands',1,3,2,5,2018);
-CREATE TABLE IF NOT EXISTS `Itemkinds` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT NOT NULL UNIQUE
-);
-INSERT INTO `Itemkinds` VALUES (1,'Skin');
-INSERT INTO `Itemkinds` VALUES (2,'Highlight Intro');
-INSERT INTO `Itemkinds` VALUES (3,'Victory Pose');
-INSERT INTO `Itemkinds` VALUES (4,'Emote');
-INSERT INTO `Itemkinds` VALUES (5,'Voice Line');
-INSERT INTO `Itemkinds` VALUES (6,'Spray');
-INSERT INTO `Itemkinds` VALUES (7,'Player Icon');
-CREATE TABLE IF NOT EXISTS `ItemRarities` (
+INSERT INTO `Items` VALUES (24,'Heroic',1,4,1,NULL,NULL);
+INSERT INTO `Items` VALUES (25,'Disapproving',1,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (26,'Not Impressed',1,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (27,'Protector',1,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (28,'Take a Knee',1,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (29,'Tea Time',1,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (30,'Beach Ball',1,4,3,3,2017);
+INSERT INTO `Items` VALUES (31,'Candy',1,4,3,2,2016);
+INSERT INTO `Items` VALUES (32,'Dance',1,4,3,4,9999);
+INSERT INTO `Items` VALUES (33,'Heroic',1,2,1,NULL,NULL);
+INSERT INTO `Items` VALUES (34,'Guardian',1,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (35,'Locked On',1,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (36,'Shhh...',1,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (37,'Under Fire',1,2,3,NULL,NULL);
+CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT NOT NULL UNIQUE,
 	`Price`	INTEGER NOT NULL UNIQUE,
 	`CreditForDuplicate`	INTEGER NOT NULL UNIQUE
 );
-INSERT INTO `ItemRarities` VALUES (1,'Common',0,25);
-INSERT INTO `ItemRarities` VALUES (2,'Rare',75,75);
-INSERT INTO `ItemRarities` VALUES (3,'Epic',250,250);
-INSERT INTO `ItemRarities` VALUES (4,'Legendary',1000,500);
+INSERT INTO `Item_Rarities` VALUES (1,'Common',0,25);
+INSERT INTO `Item_Rarities` VALUES (2,'Rare',75,75);
+INSERT INTO `Item_Rarities` VALUES (3,'Epic',250,250);
+INSERT INTO `Item_Rarities` VALUES (4,'Legendary',1000,500);
+CREATE TABLE IF NOT EXISTS `Item_Kinds` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Item_Kinds` VALUES (1,'Skin');
+INSERT INTO `Item_Kinds` VALUES (2,'Highlight Intro');
+INSERT INTO `Item_Kinds` VALUES (3,'Victory Pose');
+INSERT INTO `Item_Kinds` VALUES (4,'Emote');
+INSERT INTO `Item_Kinds` VALUES (5,'Voice Line');
+INSERT INTO `Item_Kinds` VALUES (6,'Spray');
+INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
 CREATE TABLE IF NOT EXISTS `Heros` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -115,6 +151,13 @@ INSERT INTO `Heros` VALUES (25,'Soldier: 76',2,200,0,0,1);
 INSERT INTO `Heros` VALUES (26,'Reaper',2,250,0,0,1);
 INSERT INTO `Heros` VALUES (27,'Pharah',2,200,0,0,1);
 INSERT INTO `Heros` VALUES (28,'Widowmaker',2,200,0,0,2);
+CREATE TABLE IF NOT EXISTS `Hero_Roles` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Hero_Roles` VALUES (1,'Support');
+INSERT INTO `Hero_Roles` VALUES (2,'Damage');
+INSERT INTO `Hero_Roles` VALUES (3,'Tank');
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
