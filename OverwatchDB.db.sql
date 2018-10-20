@@ -16,8 +16,8 @@ CREATE TABLE IF NOT EXISTS `Overwatch_Players` (
 );
 INSERT INTO `Overwatch_Players` VALUES (1,'Taimou','Timo','Kettunen','2','Finnish',800,5,NULL,7,28,NULL,NULL);
 INSERT INTO `Overwatch_Players` VALUES (2,'FitzyHere','','','2','',NULL,NULL,NULL,NULL,24,NULL,NULL);
-INSERT INTO `Overwatch_Players` VALUES (3,'Codey','','','2','',800,3.5,NULL,NULL,24,NULL,NULL);
-INSERT INTO `Overwatch_Players` VALUES (4,'Mightty','Dan','','2','',NULL,NULL,NULL,NULL,24,NULL,NULL);
+INSERT INTO `Overwatch_Players` VALUES (3,'Codey','','','2','',800,3.5,NULL,NULL,24,16,NULL);
+INSERT INTO `Overwatch_Players` VALUES (4,'Mightty','Dan','','2','',NULL,NULL,NULL,NULL,24,4,16);
 INSERT INTO `Overwatch_Players` VALUES (5,'ml7','','','1','',800,7,50,NULL,1,NULL,NULL);
 INSERT INTO `Overwatch_Players` VALUES (6,'EeveeA','','','','',NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `Overwatch_Players` VALUES (7,'Dafran','','','','',NULL,NULL,NULL,NULL,25,23,NULL);
