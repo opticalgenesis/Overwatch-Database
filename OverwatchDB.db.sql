@@ -151,6 +151,41 @@ CREATE TABLE IF NOT EXISTS `Maps` (
 	`name`	INTEGER,
 	`map_kind`	INTEGER
 );
+INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2);
+INSERT INTO `Maps` VALUES (2,'Busan',1);
+INSERT INTO `Maps` VALUES (3,'Junkertown',3);
+INSERT INTO `Maps` VALUES (4,'Hollywood',4);
+INSERT INTO `Maps` VALUES (5,'Oasis',1);
+INSERT INTO `Maps` VALUES (6,'Dorado',3);
+INSERT INTO `Maps` VALUES (7,'Route 66',3);
+INSERT INTO `Maps` VALUES (8,'Hanamura',2);
+INSERT INTO `Maps` VALUES (9,'Horizon Lunar Colony',2);
+INSERT INTO `Maps` VALUES (10,'Volskaya Industries',2);
+INSERT INTO `Maps` VALUES (11,'Ilios',1);
+INSERT INTO `Maps` VALUES (12,'Numbani',4);
+INSERT INTO `Maps` VALUES (13,'Château Guillard',5);
+INSERT INTO `Maps` VALUES (14,'Nepal',1);
+INSERT INTO `Maps` VALUES (15,'Lijang Tower',1);
+INSERT INTO `Maps` VALUES (16,'Rialto',3);
+INSERT INTO `Maps` VALUES (17,'Watchpoint: Gibraltar',3);
+INSERT INTO `Maps` VALUES (18,'Blizzard World',4);
+INSERT INTO `Maps` VALUES (19,'King''s Row',4);
+INSERT INTO `Maps` VALUES (20,'Eichenwalde',4);
+INSERT INTO `Maps` VALUES (21,'Black Forest',5);
+INSERT INTO `Maps` VALUES (22,'Castilo',5);
+INSERT INTO `Maps` VALUES (23,'Petra',5);
+INSERT INTO `Maps` VALUES (24,'Necropolis',5);
+INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5);
+INSERT INTO `Maps` VALUES (26,'Ayutthaya',5);
+CREATE TABLE IF NOT EXISTS `Map_kinds` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Map_kinds` VALUES (1,'Control');
+INSERT INTO `Map_kinds` VALUES (2,'Assault');
+INSERT INTO `Map_kinds` VALUES (3,'Escort');
+INSERT INTO `Map_kinds` VALUES (4,'Hybrid');
+INSERT INTO `Map_kinds` VALUES (5,'Arcade');
 CREATE TABLE IF NOT EXISTS `Items` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL,
@@ -311,6 +346,19 @@ INSERT INTO `Items` VALUES (148,'Battle Angel',3,2,2,NULL,NULL);
 INSERT INTO `Items` VALUES (149,'Guardian Angel',3,2,2,NULL,NULL);
 INSERT INTO `Items` VALUES (150,'Heroes Never Die',3,2,2,NULL,NULL);
 INSERT INTO `Items` VALUES (151,'Fortune',3,2,2,5,2017);
+INSERT INTO `Items` VALUES (152,'Classic',4,1,1,NULL,NULL);
+INSERT INTO `Items` VALUES (153,'Blå',4,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (154,'Grön',4,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (155,'Plommon',4,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (156,'Röd',4,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (157,'Carbon Fiber',4,1,3,NULL,NULL);
+INSERT INTO `Items` VALUES (158,'Ironclad',4,1,3,NULL,NULL);
+INSERT INTO `Items` VALUES (159,'Tre Kronor',4,1,3,3,2018);
+INSERT INTO `Items` VALUES (160,'Máni',4,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (161,'Sól',4,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (162,'Engineer',4,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (163,'Mechanic',4,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (164,'Shieldmaiden',4,1,4,4,2018);
 CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT UNIQUE,
@@ -336,40 +384,41 @@ INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
 CREATE TABLE IF NOT EXISTS `Heros` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
-	`Role`	INTEGER NOT NULL,
-	`Health`	INTEGER NOT NULL,
-	`Armor`	INTEGER,
-	`Shield`	INTEGER,
-	`Difficulty`	INTEGER
+	`role`	INTEGER NOT NULL,
+	`health`	INTEGER NOT NULL,
+	`armor`	INTEGER,
+	`shield`	INTEGER,
+	`difficulty`	INTEGER,
+	`full_name`	TEXT
 );
-INSERT INTO `Heros` VALUES (1,'Ana',1,200,0,0,3);
-INSERT INTO `Heros` VALUES (2,'Zenyatta',1,50,0,150,3);
-INSERT INTO `Heros` VALUES (3,'Mercy',1,200,0,0,1);
-INSERT INTO `Heros` VALUES (4,'Brigitte',1,200,50,0,1);
-INSERT INTO `Heros` VALUES (5,'Moira',1,200,0,0,2);
-INSERT INTO `Heros` VALUES (6,'Lucio',1,200,0,0,2);
-INSERT INTO `Heros` VALUES (7,'D.VA',3,200,200,0,2);
-INSERT INTO `Heros` VALUES (8,'Zarya',3,200,0,200,3);
-INSERT INTO `Heros` VALUES (9,'Reinhardt',3,300,200,0,1);
-INSERT INTO `Heros` VALUES (10,'Orisa',3,200,200,0,2);
-INSERT INTO `Heros` VALUES (11,'Roadhog',3,600,0,0,1);
-INSERT INTO `Heros` VALUES (12,'Winston',3,400,100,0,2);
-INSERT INTO `Heros` VALUES (13,'Wrecking Ball',3,500,100,0,3);
-INSERT INTO `Heros` VALUES (14,'Bastion',2,200,100,0,1);
-INSERT INTO `Heros` VALUES (15,'Mei',2,250,0,0,3);
-INSERT INTO `Heros` VALUES (16,'Doomfist',2,250,0,0,3);
-INSERT INTO `Heros` VALUES (17,'Genji',2,200,0,0,3);
-INSERT INTO `Heros` VALUES (18,'Hanzo',2,200,0,0,3);
-INSERT INTO `Heros` VALUES (19,'Junkrat',2,200,0,0,2);
-INSERT INTO `Heros` VALUES (20,'McCree',2,200,0,0,2);
-INSERT INTO `Heros` VALUES (21,'Symmetra',2,100,0,100,2);
-INSERT INTO `Heros` VALUES (22,'Torbjörn',2,200,0,0,2);
-INSERT INTO `Heros` VALUES (23,'Tracer',2,150,0,0,2);
-INSERT INTO `Heros` VALUES (24,'Sombra',2,200,0,0,3);
-INSERT INTO `Heros` VALUES (25,'Soldier: 76',2,200,0,0,1);
-INSERT INTO `Heros` VALUES (26,'Reaper',2,250,0,0,1);
-INSERT INTO `Heros` VALUES (27,'Pharah',2,200,0,0,1);
-INSERT INTO `Heros` VALUES (28,'Widowmaker',2,200,0,0,2);
+INSERT INTO `Heros` VALUES (1,'Ana',1,200,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (2,'Zenyatta',1,50,0,150,3,NULL);
+INSERT INTO `Heros` VALUES (3,'Mercy',1,200,0,0,1,NULL);
+INSERT INTO `Heros` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm');
+INSERT INTO `Heros` VALUES (5,'Moira',1,200,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (6,'Lucio',1,200,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (7,'D.VA',3,200,200,0,2,NULL);
+INSERT INTO `Heros` VALUES (8,'Zarya',3,200,0,200,3,NULL);
+INSERT INTO `Heros` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm');
+INSERT INTO `Heros` VALUES (10,'Orisa',3,200,200,0,2,NULL);
+INSERT INTO `Heros` VALUES (11,'Roadhog',3,600,0,0,1,NULL);
+INSERT INTO `Heros` VALUES (12,'Winston',3,400,100,0,2,NULL);
+INSERT INTO `Heros` VALUES (13,'Wrecking Ball',3,500,100,0,3,NULL);
+INSERT INTO `Heros` VALUES (14,'Bastion',2,200,100,0,1,NULL);
+INSERT INTO `Heros` VALUES (15,'Mei',2,250,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (16,'Doomfist',2,250,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (17,'Genji',2,200,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (18,'Hanzo',2,200,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (19,'Junkrat',2,200,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (20,'McCree',2,200,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (21,'Symmetra',2,100,0,100,2,NULL);
+INSERT INTO `Heros` VALUES (22,'Torbjörn',2,200,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (23,'Tracer',2,150,0,0,2,NULL);
+INSERT INTO `Heros` VALUES (24,'Sombra',2,200,0,0,3,NULL);
+INSERT INTO `Heros` VALUES (25,'Soldier: 76',2,200,0,0,1,NULL);
+INSERT INTO `Heros` VALUES (26,'Reaper',2,250,0,0,1,NULL);
+INSERT INTO `Heros` VALUES (27,'Pharah',2,200,0,0,1,NULL);
+INSERT INTO `Heros` VALUES (28,'Widowmaker',2,200,0,0,2,NULL);
 CREATE TABLE IF NOT EXISTS `Hero_Roles` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
