@@ -33,6 +33,7 @@ INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2);
 INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
 INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
+INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -40,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`full_name`	TEXT UNIQUE,
 	`role`	INTEGER
 );
+INSERT INTO `Overwatch_League_Players` VALUES (1,'Rascal',11,'Dong-jun Kim',2);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -69,6 +71,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (8,'Seoul');
 INSERT INTO `Overwatch_League_Cities` VALUES (9,'Florida');
 INSERT INTO `Overwatch_League_Cities` VALUES (10,'Boston');
 INSERT INTO `Overwatch_League_Cities` VALUES (11,'San Francisco');
+INSERT INTO `Overwatch_League_Cities` VALUES (12,'Atlanta ');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER,
