@@ -390,4 +390,22 @@ INSERT INTO `Events` VALUES (6,'Archives');
 INSERT INTO `Events` VALUES (7,'BlizzCon');
 INSERT INTO `Events` VALUES (8,'BCRF Charity');
 INSERT INTO `Events` VALUES (9,'Overwatch League All-Star');
+CREATE TABLE IF NOT EXISTS `Cinematics` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	INTEGER NOT NULL,
+	`link`	TEXT UNIQUE,
+	`year`	INTEGER,
+	`hero_1`	INTEGER,
+	`hero_2`	INTEGER,
+	`hero_3`	INTEGER
+);
+INSERT INTO `Cinematics` VALUES (1,'Infiltration','https://youtu.be/Og5-Pm4HNlI',2016,24,26,28);
+INSERT INTO `Cinematics` VALUES (2,'Honor and Glory','https://youtu.be/sQfk5HykiEk',2018,9,4,NULL);
+INSERT INTO `Cinematics` VALUES (3,'Shooting Star','https://youtu.be/q7j2d6YCQbg',2018,7,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (4,'Rise and Shine','https://youtu.be/8tjcm_kI0n0',2017,15,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (5,'The Last Bastion','https://youtu.be/to8yh83jlXg',2016,14,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (6,'Hero','https://youtu.be/cPRRupAM4DI',2016,25,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (7,'Dragons','https://youtu.be/oJ09xdxzIJQ',2016,18,17,NULL);
+INSERT INTO `Cinematics` VALUES (8,'Alive','https://youtu.be/U130wnpi-C0',2016,28,23,NULL);
+INSERT INTO `Cinematics` VALUES (9,'Recall','https://youtu.be/sB5zlHMsM7k',2016,12,NULL,NULL);
 COMMIT;
