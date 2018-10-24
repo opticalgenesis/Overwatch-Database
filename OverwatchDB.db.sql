@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS `Youtube_Content_Creators` (
 	`name`	TEXT NOT NULL UNIQUE,
 	`link`	TEXT
 );
+INSERT INTO `Youtube_Content_Creators` VALUES (1,'Unit Lost','unitlosttube');
 CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT UNIQUE,
@@ -14,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 );
 INSERT INTO `Twitch_Streamers` VALUES (1,'Stevoo','just_stevo',21,4,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (2,'FitzyHere','fitzyhere',24,15,1);
+INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -34,6 +36,7 @@ INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
 INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Venom','5',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -56,6 +59,7 @@ INSERT INTO `Overwatch_League_Countries` VALUES (1,'United States');
 INSERT INTO `Overwatch_League_Countries` VALUES (2,'South Korea');
 INSERT INTO `Overwatch_League_Countries` VALUES (3,'England');
 INSERT INTO `Overwatch_League_Countries` VALUES (4,'China');
+INSERT INTO `Overwatch_League_Countries` VALUES (5,'Canada');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Cities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -72,6 +76,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (9,'Florida');
 INSERT INTO `Overwatch_League_Cities` VALUES (10,'Boston');
 INSERT INTO `Overwatch_League_Cities` VALUES (11,'San Francisco');
 INSERT INTO `Overwatch_League_Cities` VALUES (12,'Atlanta ');
+INSERT INTO `Overwatch_League_Cities` VALUES (13,'Toronto');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER,
