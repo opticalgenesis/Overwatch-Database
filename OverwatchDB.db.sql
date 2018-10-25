@@ -37,7 +37,7 @@ INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
 INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Venom','5',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -365,6 +365,13 @@ INSERT INTO `Item_Kinds` VALUES (4,'Emote');
 INSERT INTO `Item_Kinds` VALUES (5,'Voice Line');
 INSERT INTO `Item_Kinds` VALUES (6,'Spray');
 INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
+CREATE TABLE IF NOT EXISTS `Heros_Nationalities` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`nationality`	TEXT NOT NULL UNIQUE,
+	`country`	TEXT UNIQUE
+);
+INSERT INTO `Heros_Nationalities` VALUES (1,'Brazilian','Brazil');
+INSERT INTO `Heros_Nationalities` VALUES (2,'Irish','Ireland');
 CREATE TABLE IF NOT EXISTS `Heros` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -375,14 +382,14 @@ CREATE TABLE IF NOT EXISTS `Heros` (
 	`difficulty`	INTEGER,
 	`full_name`	TEXT,
 	`age`	INTEGER,
-	`english_voiceactor`	TEXT
+	`nationality`	INTEGER
 );
 INSERT INTO `Heros` VALUES (1,'Ana',1,200,0,0,3,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (2,'Zenyatta',1,50,0,150,3,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (3,'Mercy',1,200,0,0,1,NULL,NULL,NULL);
-INSERT INTO `Heros` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,'Matilda Smedius');
-INSERT INTO `Heros` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,'Genevieve O''Reilly');
-INSERT INTO `Heros` VALUES (6,'Lucio',1,200,0,0,2,NULL,NULL,NULL);
+INSERT INTO `Heros` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,NULL);
+INSERT INTO `Heros` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,2);
+INSERT INTO `Heros` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,1);
 INSERT INTO `Heros` VALUES (7,'D.VA',3,200,200,0,2,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (8,'Zarya',3,200,0,200,3,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',NULL,NULL);
