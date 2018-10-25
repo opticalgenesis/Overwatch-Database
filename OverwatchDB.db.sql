@@ -343,6 +343,46 @@ INSERT INTO `Items` VALUES (213,'Coalescence',5,4,3,NULL,NULL);
 INSERT INTO `Items` VALUES (214,'Transformation',5,4,3,NULL,NULL);
 INSERT INTO `Items` VALUES (215,'Vanishing Act',5,4,3,NULL,NULL);
 INSERT INTO `Items` VALUES (216,'Serve',5,4,3,3,2018);
+INSERT INTO `Items` VALUES (217,'Classic',6,1,1,NULL,NULL);
+INSERT INTO `Items` VALUES (218,'Azul',6,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (219,'Laranja',6,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (220,'Roxo',6,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (221,'Vermelho',6,1,2,NULL,NULL);
+INSERT INTO `Items` VALUES (222,'Auditiva',6,1,3,NULL,NULL);
+INSERT INTO `Items` VALUES (223,'Synaesthesia',6,1,3,NULL,NULL);
+INSERT INTO `Items` VALUES (224,'Andes',6,1,3,1,2016);
+INSERT INTO `Items` VALUES (225,'Bitrate',6,1,3,4,2018);
+INSERT INTO `Items` VALUES (226,'Capoeira',6,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (227,'HippityHop',6,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (228,'Ribbit',6,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (229,'Breakaway',6,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (230,'Slapshot',6,1,4,NULL,NULL);
+INSERT INTO `Items` VALUES (231,'Jazzy',6,1,4,4,2017);
+INSERT INTO `Items` VALUES (232,'Seleção',6,1,4,3,2016);
+INSERT INTO `Items` VALUES (233,'Striker',6,1,4,3,2016);
+INSERT INTO `Items` VALUES (234,'Equalizer',6,1,4,6,2018);
+INSERT INTO `Items` VALUES (235,'Heroic',6,3,1,NULL,NULL);
+INSERT INTO `Items` VALUES (236,'Confident',6,3,2,NULL,NULL);
+INSERT INTO `Items` VALUES (237,'Grooving',6,3,2,NULL,NULL);
+INSERT INTO `Items` VALUES (238,'Ready for Action',6,3,2,NULL,NULL);
+INSERT INTO `Items` VALUES (239,'R.I.P.',6,3,2,2,2016);
+INSERT INTO `Items` VALUES (240,'Handstand',6,3,2,6,2017);
+INSERT INTO `Items` VALUES (241,'Medal',6,3,2,3,2018);
+INSERT INTO `Items` VALUES (242,'Heroic',6,3,1,NULL,NULL);
+INSERT INTO `Items` VALUES (243,'Heroic',6,4,1,NULL,NULL);
+INSERT INTO `Items` VALUES (244,'Capoeira',6,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (245,'Chilling',6,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (246,'In the Groove',6,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (247,'Knee Slapper',6,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (248,'Nah!',6,4,3,NULL,NULL);
+INSERT INTO `Items` VALUES (249,'Juggle',6,4,3,3,2016);
+INSERT INTO `Items` VALUES (250,'Smooth',6,4,3,4,2017);
+INSERT INTO `Items` VALUES (251,'Dance Party',6,4,5,10,2018);
+INSERT INTO `Items` VALUES (252,'Heroic',6,2,1,NULL,NULL);
+INSERT INTO `Items` VALUES (253,'Drop the Beat',6,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (254,'Freestyle',6,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (255,'In the Groove',6,2,3,NULL,NULL);
+INSERT INTO `Items` VALUES (256,'Bicycle Kick',6,2,3,3,2016);
 CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT UNIQUE,
@@ -372,6 +412,7 @@ CREATE TABLE IF NOT EXISTS `Heros_Nationalities` (
 );
 INSERT INTO `Heros_Nationalities` VALUES (1,'Brazilian','Brazil');
 INSERT INTO `Heros_Nationalities` VALUES (2,'Irish','Ireland');
+INSERT INTO `Heros_Nationalities` VALUES (3,'German','Germany');
 CREATE TABLE IF NOT EXISTS `Heros` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -392,7 +433,7 @@ INSERT INTO `Heros` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,2);
 INSERT INTO `Heros` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,1);
 INSERT INTO `Heros` VALUES (7,'D.VA',3,200,200,0,2,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (8,'Zarya',3,200,0,200,3,NULL,NULL,NULL);
-INSERT INTO `Heros` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',NULL,NULL);
+INSERT INTO `Heros` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,3);
 INSERT INTO `Heros` VALUES (10,'Orisa',3,200,200,0,2,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (11,'Roadhog',3,600,0,0,1,NULL,NULL,NULL);
 INSERT INTO `Heros` VALUES (12,'Winston',3,400,100,0,2,NULL,NULL,NULL);
@@ -432,6 +473,7 @@ INSERT INTO `Events` VALUES (6,'Archives');
 INSERT INTO `Events` VALUES (7,'BlizzCon');
 INSERT INTO `Events` VALUES (8,'BCRF Charity');
 INSERT INTO `Events` VALUES (9,'Overwatch League All-Star');
+INSERT INTO `Events` VALUES (10,'Overwatch League All-Access Pass');
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL,
