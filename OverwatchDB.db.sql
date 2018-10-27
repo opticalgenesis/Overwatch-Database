@@ -421,7 +421,7 @@ CREATE TABLE IF NOT EXISTS `Heroes` (
 	`armor`	INTEGER,
 	`shield`	INTEGER,
 	`difficulty`	INTEGER,
-	`full_name`	TEXT,
+	`real_name`	TEXT,
 	`age`	INTEGER,
 	`country`	INTEGER,
 	`quote`	TEXT UNIQUE
