@@ -38,14 +38,19 @@ INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','?','1',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
 	`owl_team`	INTEGER,
 	`full_name`	TEXT UNIQUE,
-	`role`	INTEGER
+	`role`	INTEGER,
+	`birth_year`	INTEGER
 );
-INSERT INTO `Overwatch_League_Players` VALUES (1,'Rascal',11,'Dong-jun Kim',2);
+INSERT INTO `Overwatch_League_Players` VALUES (1,'Rascal',11,'Dong-jun Kim',2,'');
+INSERT INTO `Overwatch_League_Players` VALUES (2,'Smurf',11,'Yoo Myung-hwan',3,'');
+INSERT INTO `Overwatch_League_Players` VALUES (3,'Janus',15,'Song Joon-hwa',3,'');
+INSERT INTO `Overwatch_League_Players` VALUES (4,'Geguri',2,'Kim Se-yeon',3,1999);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -78,6 +83,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (10,'Boston');
 INSERT INTO `Overwatch_League_Cities` VALUES (11,'San Francisco');
 INSERT INTO `Overwatch_League_Cities` VALUES (12,'Atlanta ');
 INSERT INTO `Overwatch_League_Cities` VALUES (13,'Toronto');
+INSERT INTO `Overwatch_League_Cities` VALUES (14,'Washington D.C.');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER,
@@ -104,11 +110,12 @@ INSERT INTO `Maps` VALUES (18,'Blizzard World',4);
 INSERT INTO `Maps` VALUES (19,'King''s Row',4);
 INSERT INTO `Maps` VALUES (20,'Eichenwalde',4);
 INSERT INTO `Maps` VALUES (21,'Black Forest',5);
-INSERT INTO `Maps` VALUES (22,'Castilo',5);
+INSERT INTO `Maps` VALUES (22,'Castillo',5);
 INSERT INTO `Maps` VALUES (23,'Petra',5);
 INSERT INTO `Maps` VALUES (24,'Necropolis',5);
 INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5);
 INSERT INTO `Maps` VALUES (26,'Ayutthaya',5);
+INSERT INTO `Maps` VALUES (27,'Château Guillard',5);
 CREATE TABLE IF NOT EXISTS `Map_kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -475,6 +482,10 @@ INSERT INTO `Events` VALUES (7,'BlizzCon');
 INSERT INTO `Events` VALUES (8,'BCRF Charity');
 INSERT INTO `Events` VALUES (9,'Overwatch League All-Star');
 INSERT INTO `Events` VALUES (10,'Overwatch League All-Access Pass');
+CREATE TABLE IF NOT EXISTS `Cut_Maps` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT UNIQUE
+);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL,
