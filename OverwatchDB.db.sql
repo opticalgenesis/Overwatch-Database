@@ -187,7 +187,6 @@ INSERT INTO `Items` VALUES (50,'Cyberspace',24,1,4,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (51,'Tulum',24,1,4,3,2017,NULL);
 INSERT INTO `Items` VALUES (52,'Rime',24,1,4,1,2017,NULL);
 INSERT INTO `Items` VALUES (53,'Talon',24,1,4,6,2018,NULL);
-INSERT INTO `Items` VALUES (54,'Demon Hunter',24,1,5,7,2018,NULL);
 INSERT INTO `Items` VALUES (55,'Bride',24,1,4,2,2018,NULL);
 INSERT INTO `Items` VALUES (56,'Heroic',24,3,1,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (57,'Hacked',24,3,2,NULL,NULL,NULL);
@@ -261,7 +260,6 @@ INSERT INTO `Items` VALUES (124,'Combat Medic Ziegler',3,1,4,6,2017,'When called
 INSERT INTO `Items` VALUES (125,'Winged Victory',3,1,4,3,2017,NULL);
 INSERT INTO `Items` VALUES (126,'Witch',3,1,4,2,2017,'The Witch of the Wilds is a mysterious figure who appears in the tale of Dr. Junkenstein and others, offering people the object of their desire, for a price.');
 INSERT INTO `Items` VALUES (127,'Zhuque',3,1,4,5,2018,NULL);
-INSERT INTO `Items` VALUES (128,'Pink',3,1,4,8,2018,NULL);
 INSERT INTO `Items` VALUES (129,'Heroic',3,3,1,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (130,'Angelic',3,3,2,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (131,'Carefree',3,3,2,NULL,NULL,NULL);
@@ -399,7 +397,6 @@ INSERT INTO `Item_Rarities` VALUES (1,'Common',0,25);
 INSERT INTO `Item_Rarities` VALUES (2,'Rare',75,75);
 INSERT INTO `Item_Rarities` VALUES (3,'Epic',250,250);
 INSERT INTO `Item_Rarities` VALUES (4,'Legendary',1000,500);
-INSERT INTO `Item_Rarities` VALUES (5,'Special Legendary',0,0);
 CREATE TABLE IF NOT EXISTS `Item_Kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -485,16 +482,13 @@ CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
 );
+INSERT INTO `Events` VALUES (0,'Overwatch League All-Access Pass');
 INSERT INTO `Events` VALUES (1,'Winter Wonderland');
 INSERT INTO `Events` VALUES (2,'Halloween Terror');
 INSERT INTO `Events` VALUES (3,'Summer Games');
 INSERT INTO `Events` VALUES (4,'Aniversary');
 INSERT INTO `Events` VALUES (5,'Lunar New Year');
 INSERT INTO `Events` VALUES (6,'Archives');
-INSERT INTO `Events` VALUES (7,'BlizzCon');
-INSERT INTO `Events` VALUES (8,'BCRF Charity');
-INSERT INTO `Events` VALUES (9,'Overwatch League All-Star');
-INSERT INTO `Events` VALUES (10,'Overwatch League All-Access Pass');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
