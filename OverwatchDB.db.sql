@@ -86,7 +86,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (13,'Toronto');
 INSERT INTO `Overwatch_League_Cities` VALUES (14,'Washington D.C.');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	INTEGER,
+	`name`	INTEGER UNIQUE,
 	`map_kind`	INTEGER
 );
 INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2);
@@ -115,7 +115,6 @@ INSERT INTO `Maps` VALUES (23,'Petra',5);
 INSERT INTO `Maps` VALUES (24,'Necropolis',5);
 INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5);
 INSERT INTO `Maps` VALUES (26,'Ayutthaya',5);
-INSERT INTO `Maps` VALUES (27,'Château Guillard',5);
 CREATE TABLE IF NOT EXISTS `Map_kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
