@@ -385,7 +385,6 @@ INSERT INTO `Items` VALUES (247,'Knee Slapper',6,4,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (248,'Nah!',6,4,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (249,'Juggle',6,4,3,3,2016,NULL);
 INSERT INTO `Items` VALUES (250,'Smooth',6,4,3,4,2017,NULL);
-INSERT INTO `Items` VALUES (251,'Dance Party',6,4,5,10,2018,NULL);
 INSERT INTO `Items` VALUES (252,'Heroic',6,2,1,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (253,'Drop the Beat',6,2,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (254,'Freestyle',6,2,3,NULL,NULL,NULL);
@@ -413,6 +412,26 @@ INSERT INTO `Item_Kinds` VALUES (4,'Emote');
 INSERT INTO `Item_Kinds` VALUES (5,'Voice Line');
 INSERT INTO `Item_Kinds` VALUES (6,'Spray');
 INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
+CREATE TABLE IF NOT EXISTS `Heroes_Nationalities` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`nationality`	TEXT NOT NULL UNIQUE,
+	`country`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Heroes_Nationalities` VALUES (1,'American','United States');
+INSERT INTO `Heroes_Nationalities` VALUES (2,'Japanese','Japan');
+INSERT INTO `Heroes_Nationalities` VALUES (3,'Indian','India');
+INSERT INTO `Heroes_Nationalities` VALUES (4,'Chinese','China');
+INSERT INTO `Heroes_Nationalities` VALUES (5,'Russian','Russia');
+INSERT INTO `Heroes_Nationalities` VALUES (6,'Australian','Australia');
+INSERT INTO `Heroes_Nationalities` VALUES (7,'Egyption','Egypt');
+INSERT INTO `Heroes_Nationalities` VALUES (8,'Swiss','Switzerland');
+INSERT INTO `Heroes_Nationalities` VALUES (9,'French','France');
+INSERT INTO `Heroes_Nationalities` VALUES (10,'German','Germany');
+INSERT INTO `Heroes_Nationalities` VALUES (11,'Korean','Korea');
+INSERT INTO `Heroes_Nationalities` VALUES (12,'Swedish','Sweden');
+INSERT INTO `Heroes_Nationalities` VALUES (13,'Mexican','Mexico');
+INSERT INTO `Heroes_Nationalities` VALUES (14,'Nigerian','Nigeria');
+INSERT INTO `Heroes_Nationalities` VALUES (15,'British','United Kingdom');
 CREATE TABLE IF NOT EXISTS `Heroes` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -423,37 +442,37 @@ CREATE TABLE IF NOT EXISTS `Heroes` (
 	`difficulty`	INTEGER,
 	`real_name`	TEXT,
 	`age`	INTEGER,
-	`country`	INTEGER,
+	`nationality`	INTEGER,
 	`quote`	TEXT UNIQUE
 );
-INSERT INTO `Heroes` VALUES (1,'Ana',1,200,0,0,3,NULL,NULL,NULL,NULL);
-INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,NULL,NULL,NULL,NULL);
-INSERT INTO `Heroes` VALUES (3,'Mercy',1,200,0,0,1,NULL,NULL,NULL,NULL);
-INSERT INTO `Heroes` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,'Sweden',NULL);
+INSERT INTO `Heroes` VALUES (1,'Ana',1,200,0,0,3,'Ana Amari',60,7,'Never stop fighting for what you believe in.');
+INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,NULL,NULL);
+INSERT INTO `Heroes` VALUES (3,'Mercy',1,200,0,0,1,'Angela Ziegler',37,8,'I''ll be watching over you.');
+INSERT INTO `Heroes` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,12,'I will prove myself!');
 INSERT INTO `Heroes` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,NULL,NULL);
 INSERT INTO `Heroes` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,NULL,NULL);
-INSERT INTO `Heroes` VALUES (7,'D.VA',3,200,200,0,2,'Hana Song',19,'Korea','I play to win.');
-INSERT INTO `Heroes` VALUES (8,'Zarya',3,200,0,200,3,'leksandra Zaryanova',28,'Russia','Together we are strong.');
-INSERT INTO `Heroes` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,'Germany','Justice will be done.');
+INSERT INTO `Heroes` VALUES (7,'D.VA',3,200,200,0,2,'Hana Song',19,11,'I play to win.');
+INSERT INTO `Heroes` VALUES (8,'Zarya',3,200,0,200,3,'leksandra Zaryanova',28,5,'Together we are strong.');
+INSERT INTO `Heroes` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,10,'Justice will be done.');
 INSERT INTO `Heroes` VALUES (10,'Orisa',3,200,200,0,2,'',1,NULL,'Your safety is my primary concern.');
-INSERT INTO `Heroes` VALUES (11,'Roadhog',3,600,0,0,1,'Mako Rutledge',48,'Australia','I''m a one-man apocalypse.');
+INSERT INTO `Heroes` VALUES (11,'Roadhog',3,600,0,0,1,'Mako Rutledge',48,6,'I''m a one-man apocalypse.');
 INSERT INTO `Heroes` VALUES (12,'Winston',3,400,100,0,2,'',29,NULL,'Imagination is the essence of discovery.');
 INSERT INTO `Heroes` VALUES (13,'Wrecking Ball',3,500,100,0,3,'Hammond',14,NULL,'Do not anger the hamster.');
-INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,NULL,NULL);
-INSERT INTO `Heroes` VALUES (15,'Mei',2,250,0,0,3,'Mei-Ling Zhou',31,'China','Our world is worth fighting for.');
-INSERT INTO `Heroes` VALUES (16,'Doomfist',2,250,0,0,3,'Akande Ogundimu',45,'Nigeria','Only through conflict do we evolve.');
-INSERT INTO `Heroes` VALUES (17,'Genji',2,200,0,0,3,'Genji Shimada',35,'Japan','Even if I sacrifice my body, I will never sacrifice my honor.');
-INSERT INTO `Heroes` VALUES (18,'Hanzo',2,200,0,0,3,'Hanzo Shimada',38,'Japan','With every death comes honor. With honor, redemption.');
-INSERT INTO `Heroes` VALUES (19,'Junkrat',2,200,0,0,2,'Jamison Fawkes',25,'Australia','It''s a perfect day for some mayhem.');
-INSERT INTO `Heroes` VALUES (20,'McCree',2,200,0,0,2,'Jesse McCree',37,'United States','Justice ain''t gonna dispense itself.');
-INSERT INTO `Heroes` VALUES (21,'Symmetra',2,100,0,100,2,'Satya Vaswani',28,'India','The true enemy of humanity is disorder.');
-INSERT INTO `Heroes` VALUES (22,'Torbjörn',2,200,0,0,2,'Torbjörn Lindholm',57,'Sweden','Build ''em up, Break ''em down.');
-INSERT INTO `Heroes` VALUES (23,'Tracer',2,150,0,0,2,'Lena Oxton',26,'UK','Cheers, love! The cavalry''s here!');
-INSERT INTO `Heroes` VALUES (24,'Sombra',2,200,0,0,3,'Olivia Colomar',30,'Mexico','Everything can be hacked... and everyone.');
-INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison','?','United States','We''re all soldiers now.');
-INSERT INTO `Heroes` VALUES (26,'Reaper',2,250,0,0,1,'Gabriel Reyes',58,'United States','Death walks among you.');
-INSERT INTO `Heroes` VALUES (27,'Pharah',2,200,0,0,1,'Fareeha Amari',32,'Egypt','I will protect the innocent.');
-INSERT INTO `Heroes` VALUES (28,'Widowmaker',2,200,0,0,2,'Amélie Lacroix (née Guillard)',33,'France',NULL);
+INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,'','');
+INSERT INTO `Heroes` VALUES (15,'Mei',2,250,0,0,3,'Mei-Ling Zhou',31,4,'Our world is worth fighting for.');
+INSERT INTO `Heroes` VALUES (16,'Doomfist',2,250,0,0,3,'Akande Ogundimu',45,14,'Only through conflict do we evolve.');
+INSERT INTO `Heroes` VALUES (17,'Genji',2,200,0,0,3,'Genji Shimada',35,2,'Even if I sacrifice my body, I will never sacrifice my honor.');
+INSERT INTO `Heroes` VALUES (18,'Hanzo',2,200,0,0,3,'Hanzo Shimada',38,2,'With every death comes honor. With honor, redemption.');
+INSERT INTO `Heroes` VALUES (19,'Junkrat',2,200,0,0,2,'Jamison Fawkes',25,6,'It''s a perfect day for some mayhem.');
+INSERT INTO `Heroes` VALUES (20,'McCree',2,200,0,0,2,'Jesse McCree',37,1,'Justice ain''t gonna dispense itself.');
+INSERT INTO `Heroes` VALUES (21,'Symmetra',2,100,0,100,2,'Satya Vaswani',28,3,'The true enemy of humanity is disorder.');
+INSERT INTO `Heroes` VALUES (22,'Torbjörn',2,200,0,0,2,'Torbjörn Lindholm',57,12,'Build ''em up, Break ''em down.');
+INSERT INTO `Heroes` VALUES (23,'Tracer',2,150,0,0,2,'Lena Oxton',26,15,'Cheers, love! The cavalry''s here!');
+INSERT INTO `Heroes` VALUES (24,'Sombra',2,200,0,0,3,'Olivia Colomar',30,13,'Everything can be hacked... and everyone.');
+INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison','?',1,'We''re all soldiers now.');
+INSERT INTO `Heroes` VALUES (26,'Reaper',2,250,0,0,1,'Gabriel Reyes',58,1,'Death walks among you.');
+INSERT INTO `Heroes` VALUES (27,'Pharah',2,200,0,0,1,'Fareeha Amari',32,7,'I will protect the innocent.');
+INSERT INTO `Heroes` VALUES (28,'Widowmaker',2,200,0,0,2,'Amélie Lacroix (née Guillard)',33,9,'One shot, one kill.');
 CREATE TABLE IF NOT EXISTS `Hero_Roles` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
