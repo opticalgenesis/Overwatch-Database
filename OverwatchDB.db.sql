@@ -432,6 +432,8 @@ INSERT INTO `Heroes_Nationalities` VALUES (12,'Swedish','Sweden');
 INSERT INTO `Heroes_Nationalities` VALUES (13,'Mexican','Mexico');
 INSERT INTO `Heroes_Nationalities` VALUES (14,'Nigerian','Nigeria');
 INSERT INTO `Heroes_Nationalities` VALUES (15,'British','United Kingdom');
+INSERT INTO `Heroes_Nationalities` VALUES (16,'Irish','Ireland');
+INSERT INTO `Heroes_Nationalities` VALUES (17,'Brazilian','Brazil');
 CREATE TABLE IF NOT EXISTS `Heroes` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -446,11 +448,11 @@ CREATE TABLE IF NOT EXISTS `Heroes` (
 	`quote`	TEXT UNIQUE
 );
 INSERT INTO `Heroes` VALUES (1,'Ana',1,200,0,0,3,'Ana Amari',60,7,'Never stop fighting for what you believe in.');
-INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,NULL,NULL);
+INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,NULL,'True self is without form.');
 INSERT INTO `Heroes` VALUES (3,'Mercy',1,200,0,0,1,'Angela Ziegler',37,8,'I''ll be watching over you.');
 INSERT INTO `Heroes` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,12,'I will prove myself!');
-INSERT INTO `Heroes` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,NULL,NULL);
-INSERT INTO `Heroes` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,NULL,NULL);
+INSERT INTO `Heroes` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,16,'Science will reveal the truth.');
+INSERT INTO `Heroes` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,17,'Come on, let''s bring it together!');
 INSERT INTO `Heroes` VALUES (7,'D.VA',3,200,200,0,2,'Hana Song',19,11,'I play to win.');
 INSERT INTO `Heroes` VALUES (8,'Zarya',3,200,0,200,3,'leksandra Zaryanova',28,5,'Together we are strong.');
 INSERT INTO `Heroes` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,10,'Justice will be done.');
