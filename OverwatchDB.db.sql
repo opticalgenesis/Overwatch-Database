@@ -430,6 +430,7 @@ INSERT INTO `Heroes_Nationalities` VALUES (14,'Nigerian','Nigeria');
 INSERT INTO `Heroes_Nationalities` VALUES (15,'British','United Kingdom');
 INSERT INTO `Heroes_Nationalities` VALUES (16,'Irish','Ireland');
 INSERT INTO `Heroes_Nationalities` VALUES (17,'Brazilian','Brazil');
+INSERT INTO `Heroes_Nationalities` VALUES (18,'None','None');
 CREATE TABLE IF NOT EXISTS `Heroes` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -444,7 +445,7 @@ CREATE TABLE IF NOT EXISTS `Heroes` (
 	`quote`	TEXT UNIQUE
 );
 INSERT INTO `Heroes` VALUES (1,'Ana',1,200,0,0,3,'Ana Amari',60,7,'Never stop fighting for what you believe in.');
-INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,NULL,'True self is without form.');
+INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,18,'True self is without form.');
 INSERT INTO `Heroes` VALUES (3,'Mercy',1,200,0,0,1,'Angela Ziegler',37,8,'I''ll be watching over you.');
 INSERT INTO `Heroes` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,12,'I will prove myself!');
 INSERT INTO `Heroes` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,16,'Science will reveal the truth.');
@@ -452,11 +453,11 @@ INSERT INTO `Heroes` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',2
 INSERT INTO `Heroes` VALUES (7,'D.VA',3,200,200,0,2,'Hana Song',19,11,'I play to win.');
 INSERT INTO `Heroes` VALUES (8,'Zarya',3,200,0,200,3,'leksandra Zaryanova',28,5,'Together we are strong.');
 INSERT INTO `Heroes` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,10,'Justice will be done.');
-INSERT INTO `Heroes` VALUES (10,'Orisa',3,200,200,0,2,'',1,NULL,'Your safety is my primary concern.');
+INSERT INTO `Heroes` VALUES (10,'Orisa',3,200,200,0,2,'Orisa',1,18,'Your safety is my primary concern.');
 INSERT INTO `Heroes` VALUES (11,'Roadhog',3,600,0,0,1,'Mako Rutledge',48,6,'I''m a one-man apocalypse.');
-INSERT INTO `Heroes` VALUES (12,'Winston',3,400,100,0,2,'',29,NULL,'Imagination is the essence of discovery.');
-INSERT INTO `Heroes` VALUES (13,'Wrecking Ball',3,500,100,0,3,'Hammond',14,NULL,'Do not anger the hamster.');
-INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,'','');
+INSERT INTO `Heroes` VALUES (12,'Winston',3,400,100,0,2,'Winston',29,18,'Imagination is the essence of discovery.');
+INSERT INTO `Heroes` VALUES (13,'Wrecking Ball',3,500,100,0,3,'Hammond',14,18,'Do not anger the hamster.');
+INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,18,'');
 INSERT INTO `Heroes` VALUES (15,'Mei',2,250,0,0,3,'Mei-Ling Zhou',31,4,'Our world is worth fighting for.');
 INSERT INTO `Heroes` VALUES (16,'Doomfist',2,250,0,0,3,'Akande Ogundimu',45,14,'Only through conflict do we evolve.');
 INSERT INTO `Heroes` VALUES (17,'Genji',2,200,0,0,3,'Genji Shimada',35,2,'Even if I sacrifice my body, I will never sacrifice my honor.');
