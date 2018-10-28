@@ -14,9 +14,32 @@ CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 	`hero_2`	INTEGER,
 	`hero_3`	INTEGER
 );
-INSERT INTO `Twitch_Streamers` VALUES (1,'Stevoo','just_stevo',21,4,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (1,'Stevoo','just_stevo',21,4,14);
 INSERT INTO `Twitch_Streamers` VALUES (2,'FitzyHere','fitzyhere',24,15,1);
-INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,4,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (4,'Dafran','dafran',23,25,28);
+INSERT INTO `Twitch_Streamers` VALUES (5,'SPREE','spree',8,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (6,'xQc','xqcow',12,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (7,'kephrii','kephrii',28,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (8,'Emongg','emongg',7,8,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (9,'Jardio','jardio',15,24,25);
+INSERT INTO `Twitch_Streamers` VALUES (10,'Rascal','rascal0723',17,24,20);
+INSERT INTO `Twitch_Streamers` VALUES (11,'Luminum','luminumn',21,3,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (12,'Hoshizora','hoshizoraow',3,21,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (13,'Kolorblind','kolorblind',14,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (14,'mL7','ml7_ow',1,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (15,'Wraxu','wraxu',18,28,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (16,'Metro','metro',23,25,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (17,'Barcode','barcode_ow',25,23,20);
+INSERT INTO `Twitch_Streamers` VALUES (18,'EeveeA','eeveea_',3,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (19,'Rammy','rammy',6,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (20,'Kabaji','kabajiow',NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (21,'Kragiee','kragiee',NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (22,'Sajuuk','sajuukow',24,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (23,'Oasis','oasisonoverwatch',3,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (24,'TreeboyDave','treeboydave',NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (25,'Jinx','jinxuwu',4,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (26,'iddqd','iddqd',20,28,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
