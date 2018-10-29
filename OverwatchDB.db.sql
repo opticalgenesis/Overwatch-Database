@@ -117,34 +117,35 @@ INSERT INTO `Overwatch_League_Cities` VALUES (14,'Washington D.C.');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER UNIQUE,
-	`map_kind`	INTEGER
+	`map_kind`	INTEGER,
+	`year`	INTEGER
 );
-INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2);
-INSERT INTO `Maps` VALUES (2,'Busan',1);
-INSERT INTO `Maps` VALUES (3,'Junkertown',3);
-INSERT INTO `Maps` VALUES (4,'Hollywood',4);
-INSERT INTO `Maps` VALUES (5,'Oasis',1);
-INSERT INTO `Maps` VALUES (6,'Dorado',3);
-INSERT INTO `Maps` VALUES (7,'Route 66',3);
-INSERT INTO `Maps` VALUES (8,'Hanamura',2);
-INSERT INTO `Maps` VALUES (9,'Horizon Lunar Colony',2);
-INSERT INTO `Maps` VALUES (10,'Volskaya Industries',2);
-INSERT INTO `Maps` VALUES (11,'Ilios',1);
-INSERT INTO `Maps` VALUES (12,'Numbani',4);
-INSERT INTO `Maps` VALUES (13,'Château Guillard',5);
-INSERT INTO `Maps` VALUES (14,'Nepal',1);
-INSERT INTO `Maps` VALUES (15,'Lijang Tower',1);
-INSERT INTO `Maps` VALUES (16,'Rialto',3);
-INSERT INTO `Maps` VALUES (17,'Watchpoint: Gibraltar',3);
-INSERT INTO `Maps` VALUES (18,'Blizzard World',4);
-INSERT INTO `Maps` VALUES (19,'King''s Row',4);
-INSERT INTO `Maps` VALUES (20,'Eichenwalde',4);
-INSERT INTO `Maps` VALUES (21,'Black Forest',5);
-INSERT INTO `Maps` VALUES (22,'Castillo',5);
-INSERT INTO `Maps` VALUES (23,'Petra',5);
-INSERT INTO `Maps` VALUES (24,'Necropolis',5);
-INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5);
-INSERT INTO `Maps` VALUES (26,'Ayutthaya',5);
+INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2,2016);
+INSERT INTO `Maps` VALUES (2,'Busan',1,2018);
+INSERT INTO `Maps` VALUES (3,'Junkertown',3,2017);
+INSERT INTO `Maps` VALUES (4,'Hollywood',4,2016);
+INSERT INTO `Maps` VALUES (5,'Oasis',1,2017);
+INSERT INTO `Maps` VALUES (6,'Dorado',3,2016);
+INSERT INTO `Maps` VALUES (7,'Route 66',3,2016);
+INSERT INTO `Maps` VALUES (8,'Hanamura',2,2016);
+INSERT INTO `Maps` VALUES (9,'Horizon Lunar Colony',2,2017);
+INSERT INTO `Maps` VALUES (10,'Volskaya Industries',2,2016);
+INSERT INTO `Maps` VALUES (11,'Ilios',1,2016);
+INSERT INTO `Maps` VALUES (12,'Numbani',4,2016);
+INSERT INTO `Maps` VALUES (13,'Château Guillard',5,2017);
+INSERT INTO `Maps` VALUES (14,'Nepal',1,2016);
+INSERT INTO `Maps` VALUES (15,'Lijang Tower',1,2016);
+INSERT INTO `Maps` VALUES (16,'Rialto',3,2018);
+INSERT INTO `Maps` VALUES (17,'Watchpoint: Gibraltar',3,2016);
+INSERT INTO `Maps` VALUES (18,'Blizzard World',4,2018);
+INSERT INTO `Maps` VALUES (19,'King''s Row',4,2016);
+INSERT INTO `Maps` VALUES (20,'Eichenwalde',4,2016);
+INSERT INTO `Maps` VALUES (21,'Black Forest',5,2017);
+INSERT INTO `Maps` VALUES (22,'Castillo',5,2017);
+INSERT INTO `Maps` VALUES (23,'Petra',5,2018);
+INSERT INTO `Maps` VALUES (24,'Necropolis',5,2017);
+INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5,2016);
+INSERT INTO `Maps` VALUES (26,'Ayutthaya',5,2018);
 CREATE TABLE IF NOT EXISTS `Map_kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -522,7 +523,7 @@ INSERT INTO `Events` VALUES (5,'Lunar New Year');
 INSERT INTO `Events` VALUES (6,'Archives');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT UNIQUE
+	`name`	TEXT NOT NULL UNIQUE
 );
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
