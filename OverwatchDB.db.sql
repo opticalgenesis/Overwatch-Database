@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS `Youtube_Content_Creators` (
 INSERT INTO `Youtube_Content_Creators` VALUES (1,'Unit Lost','unitlosttube','unitlostgaming');
 CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`nickname`	TEXT UNIQUE,
-	`twitch_username`	TEXT UNIQUE,
+	`nickname`	TEXT NOT NULL UNIQUE,
+	`twitch_username`	TEXT NOT NULL UNIQUE,
 	`hero_1`	INTEGER,
 	`hero_2`	INTEGER,
 	`hero_3`	INTEGER
@@ -47,6 +47,18 @@ INSERT INTO `Twitch_Streamers` VALUES (30,'CodyKoko','codyKoko',11,19,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (31,'Zunba','wg1646',8,7,11);
 INSERT INTO `Twitch_Streamers` VALUES (32,'AimBotCalvin','aimbotcalvin',20,28,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (33,'dhaK','dhaK',6,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (34,'Fareeha','fareeha',27,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (35,'Valkia','valkia',27,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (36,'EvilToaster','eviltoaster',13,10,9);
+INSERT INTO `Twitch_Streamers` VALUES (37,'ShaDowBurn','sdburn',17,27,8);
+INSERT INTO `Twitch_Streamers` VALUES (38,'Dibz','dibz',23,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (39,'KarQ','karq',1,2,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (40,'Animetic','sarahtje',3,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (41,'Ryujehong','wpghd321',1,2,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (42,'Aspen','aspen',1,3,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (43,'Zeusweapon','zeusweapon',24,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (44,'Cavalry','cavalry',17,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (45,'Puckett','puckett',NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
