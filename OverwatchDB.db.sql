@@ -535,8 +535,27 @@ INSERT INTO `Events` VALUES (5,'Lunar New Year');
 INSERT INTO `Events` VALUES (6,'Archives');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT NOT NULL UNIQUE
+	`name`	TEXT NOT NULL UNIQUE,
+	`kind`	INTEGER
 );
+INSERT INTO `Cut_Maps` VALUES (1,'Amazon',1);
+INSERT INTO `Cut_Maps` VALUES (2,'Berlin',1);
+INSERT INTO `Cut_Maps` VALUES (3,'Cairo',3);
+INSERT INTO `Cut_Maps` VALUES (4,'Galapagos',2);
+INSERT INTO `Cut_Maps` VALUES (5,'India',2);
+INSERT INTO `Cut_Maps` VALUES (6,'Iron Star',3);
+INSERT INTO `Cut_Maps` VALUES (7,'Kyoto Temple',2);
+INSERT INTO `Cut_Maps` VALUES (8,'London',1);
+INSERT INTO `Cut_Maps` VALUES (9,'San Joaquin',1);
+INSERT INTO `Cut_Maps` VALUES (10,'The Bayou',3);
+INSERT INTO `Cut_Maps` VALUES (11,'The Iris',2);
+CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT
+);
+INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
+INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
+INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL,
