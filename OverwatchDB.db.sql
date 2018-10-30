@@ -63,6 +63,8 @@ INSERT INTO `Twitch_Streamers` VALUES (46,'Glitter','glitter_xo',28,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (47,'QueenE','queene',1,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (48,'Fissure','fissure_ow',12,9,10);
 INSERT INTO `Twitch_Streamers` VALUES (49,'JJoNak','jjonaklove',2,5,1);
+INSERT INTO `Twitch_Streamers` VALUES (50,'NorsePearl','norsepearl',24,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (51,'CuppCaake','cuppcaake',3,1,5);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -538,6 +540,13 @@ INSERT INTO `Hero_Nationalities` VALUES (15,'British','United Kingdom');
 INSERT INTO `Hero_Nationalities` VALUES (16,'Irish','Ireland');
 INSERT INTO `Hero_Nationalities` VALUES (17,'Brazilian','Brazil');
 INSERT INTO `Hero_Nationalities` VALUES (18,'None','None');
+CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`hero`	INTEGER,
+	`name`	TEXT,
+	`type`	INTEGER,
+	`description`	TEXT UNIQUE
+);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
