@@ -59,6 +59,10 @@ INSERT INTO `Twitch_Streamers` VALUES (42,'Aspen','aspen',1,3,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (43,'Zeusweapon','zeusweapon',24,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (44,'Cavalry','cavalry',17,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (45,'Puckett','puckett',NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (46,'Glitter','glitter_xo',28,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (47,'QueenE','queene',1,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (48,'Fissure','fissure_ow',12,9,10);
+INSERT INTO `Twitch_Streamers` VALUES (49,'JJoNak','jjonaklove',2,5,1);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -79,20 +83,32 @@ INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
 INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','');
 INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','?','1',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
 	`owl_team`	INTEGER,
 	`full_name`	TEXT UNIQUE,
-	`role`	INTEGER,
-	`birth_year`	INTEGER
+	`role`	INTEGER
 );
-INSERT INTO `Overwatch_League_Players` VALUES (1,'Rascal',11,'Dong-jun Kim',2,'');
-INSERT INTO `Overwatch_League_Players` VALUES (2,'Smurf',11,'Yoo Myung-hwan',3,'');
-INSERT INTO `Overwatch_League_Players` VALUES (3,'Janus',15,'Song Joon-hwa',3,'');
-INSERT INTO `Overwatch_League_Players` VALUES (4,'Geguri',2,'Kim Se-yeon',3,1999);
+INSERT INTO `Overwatch_League_Players` VALUES (1,'Rascal',11,'Dong-jun Kim',2);
+INSERT INTO `Overwatch_League_Players` VALUES (2,'Smurf',11,'Yoo Myung-hwan',3);
+INSERT INTO `Overwatch_League_Players` VALUES (3,'Janus',15,'Song Joon-hwa',3);
+INSERT INTO `Overwatch_League_Players` VALUES (4,'Geguri',2,'Kim Se-yeon',3);
+INSERT INTO `Overwatch_League_Players` VALUES (5,'Fl0w3R',6,'Yeon-oh Hwang',2);
+INSERT INTO `Overwatch_League_Players` VALUES (6,'Ivy',14,'Seung-hyun Lee',2);
+INSERT INTO `Overwatch_League_Players` VALUES (7,'Stellar',14,'Do-hyung Lee',2);
+INSERT INTO `Overwatch_League_Players` VALUES (8,'Dafran',13,'Daniel Francesca',2);
+INSERT INTO `Overwatch_League_Players` VALUES (9,'Gator',13,'Blake Scott',3);
+INSERT INTO `Overwatch_League_Players` VALUES (10,'Kodak',13,'Steven Rosenberger',1);
+INSERT INTO `Overwatch_League_Players` VALUES (11,'NLaaeR',13,'Ilya Koppalov',2);
+INSERT INTO `Overwatch_League_Players` VALUES (12,'Erster',13,'Jeong Joon',2);
+INSERT INTO `Overwatch_League_Players` VALUES (13,'DACO',13,'Seo Dong-hyeong',3);
+INSERT INTO `Overwatch_League_Players` VALUES (14,'Pokpo',13,'Park Hyun-jun',3);
+INSERT INTO `Overwatch_League_Players` VALUES (15,'Masaa',13,'Petja Kantanen',1);
+INSERT INTO `Overwatch_League_Players` VALUES (16,'envy',14,'Lee Kang-jae',3);
+INSERT INTO `Overwatch_League_Players` VALUES (17,'Neko',14,'Park Se-hyeon',1);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -451,29 +467,6 @@ INSERT INTO `Item_Kinds` VALUES (4,'Emote');
 INSERT INTO `Item_Kinds` VALUES (5,'Voice Line');
 INSERT INTO `Item_Kinds` VALUES (6,'Spray');
 INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
-CREATE TABLE IF NOT EXISTS `Heroes_Nationalities` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`nationality`	TEXT NOT NULL UNIQUE,
-	`country`	TEXT NOT NULL UNIQUE
-);
-INSERT INTO `Heroes_Nationalities` VALUES (1,'American','United States');
-INSERT INTO `Heroes_Nationalities` VALUES (2,'Japanese','Japan');
-INSERT INTO `Heroes_Nationalities` VALUES (3,'Indian','India');
-INSERT INTO `Heroes_Nationalities` VALUES (4,'Chinese','China');
-INSERT INTO `Heroes_Nationalities` VALUES (5,'Russian','Russia');
-INSERT INTO `Heroes_Nationalities` VALUES (6,'Australian','Australia');
-INSERT INTO `Heroes_Nationalities` VALUES (7,'Egyption','Egypt');
-INSERT INTO `Heroes_Nationalities` VALUES (8,'Swiss','Switzerland');
-INSERT INTO `Heroes_Nationalities` VALUES (9,'French','France');
-INSERT INTO `Heroes_Nationalities` VALUES (10,'German','Germany');
-INSERT INTO `Heroes_Nationalities` VALUES (11,'Korean','Korea');
-INSERT INTO `Heroes_Nationalities` VALUES (12,'Swedish','Sweden');
-INSERT INTO `Heroes_Nationalities` VALUES (13,'Mexican','Mexico');
-INSERT INTO `Heroes_Nationalities` VALUES (14,'Nigerian','Nigeria');
-INSERT INTO `Heroes_Nationalities` VALUES (15,'British','United Kingdom');
-INSERT INTO `Heroes_Nationalities` VALUES (16,'Irish','Ireland');
-INSERT INTO `Heroes_Nationalities` VALUES (17,'Brazilian','Brazil');
-INSERT INTO `Heroes_Nationalities` VALUES (18,'None','None');
 CREATE TABLE IF NOT EXISTS `Heroes` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -522,11 +515,33 @@ CREATE TABLE IF NOT EXISTS `Hero_Roles` (
 INSERT INTO `Hero_Roles` VALUES (1,'Support');
 INSERT INTO `Hero_Roles` VALUES (2,'Damage');
 INSERT INTO `Hero_Roles` VALUES (3,'Tank');
+CREATE TABLE IF NOT EXISTS `Hero_Nationalities` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`nationality`	TEXT NOT NULL UNIQUE,
+	`country`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Hero_Nationalities` VALUES (1,'American','United States');
+INSERT INTO `Hero_Nationalities` VALUES (2,'Japanese','Japan');
+INSERT INTO `Hero_Nationalities` VALUES (3,'Indian','India');
+INSERT INTO `Hero_Nationalities` VALUES (4,'Chinese','China');
+INSERT INTO `Hero_Nationalities` VALUES (5,'Russian','Russia');
+INSERT INTO `Hero_Nationalities` VALUES (6,'Australian','Australia');
+INSERT INTO `Hero_Nationalities` VALUES (7,'Egyption','Egypt');
+INSERT INTO `Hero_Nationalities` VALUES (8,'Swiss','Switzerland');
+INSERT INTO `Hero_Nationalities` VALUES (9,'French','France');
+INSERT INTO `Hero_Nationalities` VALUES (10,'German','Germany');
+INSERT INTO `Hero_Nationalities` VALUES (11,'Korean','Korea');
+INSERT INTO `Hero_Nationalities` VALUES (12,'Swedish','Sweden');
+INSERT INTO `Hero_Nationalities` VALUES (13,'Mexican','Mexico');
+INSERT INTO `Hero_Nationalities` VALUES (14,'Nigerian','Nigeria');
+INSERT INTO `Hero_Nationalities` VALUES (15,'British','United Kingdom');
+INSERT INTO `Hero_Nationalities` VALUES (16,'Irish','Ireland');
+INSERT INTO `Hero_Nationalities` VALUES (17,'Brazilian','Brazil');
+INSERT INTO `Hero_Nationalities` VALUES (18,'None','None');
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
 );
-INSERT INTO `Events` VALUES (0,'Overwatch League All-Access Pass');
 INSERT INTO `Events` VALUES (1,'Winter Wonderland');
 INSERT INTO `Events` VALUES (2,'Halloween Terror');
 INSERT INTO `Events` VALUES (3,'Summer Games');
