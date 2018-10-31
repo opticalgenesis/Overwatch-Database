@@ -6,6 +6,11 @@ CREATE TABLE IF NOT EXISTS `Youtube_Content_Creators` (
 	`twitter_username`	TEXT
 );
 INSERT INTO `Youtube_Content_Creators` VALUES (1,'Unit Lost','unitlosttube','unitlostgaming');
+CREATE TABLE IF NOT EXISTS `YouTube_Guides` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT,
+	`hero`	INTEGER
+);
 CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -487,7 +492,7 @@ INSERT INTO `Heroes` VALUES (2,'Zenyatta',1,50,0,150,3,'Tekhartha Zenyatta',20,1
 INSERT INTO `Heroes` VALUES (3,'Mercy',1,200,0,0,1,'Angela Ziegler',37,8,'I''ll be watching over you.');
 INSERT INTO `Heroes` VALUES (4,'Brigitte',1,200,50,0,1,'Brigitte Lindholm',23,12,'I will prove myself!');
 INSERT INTO `Heroes` VALUES (5,'Moira',1,200,0,0,2,'Moira O''Deorain',48,16,'Science will reveal the truth.');
-INSERT INTO `Heroes` VALUES (6,'Lucio',1,200,0,0,2,'Lúcio Correia dos Santos',26,17,'Come on, let''s bring it together!');
+INSERT INTO `Heroes` VALUES (6,'Lúcio',1,200,0,0,2,'Lúcio Correia dos Santos',26,17,'Come on, let''s bring it together!');
 INSERT INTO `Heroes` VALUES (7,'D.VA',3,200,200,0,2,'Hana Song',19,11,'I play to win.');
 INSERT INTO `Heroes` VALUES (8,'Zarya',3,200,0,200,3,'leksandra Zaryanova',28,5,'Together we are strong.');
 INSERT INTO `Heroes` VALUES (9,'Reinhardt',3,300,200,0,1,'Reinhardt Wilhelm',61,10,'Justice will be done.');
@@ -506,7 +511,7 @@ INSERT INTO `Heroes` VALUES (21,'Symmetra',2,100,0,100,2,'Satya Vaswani',28,3,'T
 INSERT INTO `Heroes` VALUES (22,'Torbjörn',2,200,0,0,2,'Torbjörn Lindholm',57,12,'Build ''em up, Break ''em down.');
 INSERT INTO `Heroes` VALUES (23,'Tracer',2,150,0,0,2,'Lena Oxton',26,15,'Cheers, love! The cavalry''s here!');
 INSERT INTO `Heroes` VALUES (24,'Sombra',2,200,0,0,3,'Olivia Colomar',30,13,'Everything can be hacked... and everyone.');
-INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison','?',1,'We''re all soldiers now.');
+INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison',0,1,'We''re all soldiers now.');
 INSERT INTO `Heroes` VALUES (26,'Reaper',2,250,0,0,1,'Gabriel Reyes',58,1,'Death walks among you.');
 INSERT INTO `Heroes` VALUES (27,'Pharah',2,200,0,0,1,'Fareeha Amari',32,7,'I will protect the innocent.');
 INSERT INTO `Heroes` VALUES (28,'Widowmaker',2,200,0,0,2,'Amélie Lacroix (née Guillard)',33,9,'One shot, one kill.');
@@ -528,7 +533,7 @@ INSERT INTO `Hero_Nationalities` VALUES (3,'Indian','India');
 INSERT INTO `Hero_Nationalities` VALUES (4,'Chinese','China');
 INSERT INTO `Hero_Nationalities` VALUES (5,'Russian','Russia');
 INSERT INTO `Hero_Nationalities` VALUES (6,'Australian','Australia');
-INSERT INTO `Hero_Nationalities` VALUES (7,'Egyption','Egypt');
+INSERT INTO `Hero_Nationalities` VALUES (7,'Egyptian','Egypt');
 INSERT INTO `Hero_Nationalities` VALUES (8,'Swiss','Switzerland');
 INSERT INTO `Hero_Nationalities` VALUES (9,'French','France');
 INSERT INTO `Hero_Nationalities` VALUES (10,'German','Germany');
