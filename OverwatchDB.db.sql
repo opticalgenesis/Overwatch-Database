@@ -1,16 +1,4 @@
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS `Youtube_Content_Creators` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT NOT NULL UNIQUE,
-	`youtube_link`	TEXT,
-	`twitter_username`	TEXT
-);
-INSERT INTO `Youtube_Content_Creators` VALUES (1,'Unit Lost','unitlosttube','unitlostgaming');
-CREATE TABLE IF NOT EXISTS `YouTube_Guides` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT,
-	`hero`	INTEGER
-);
 CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
