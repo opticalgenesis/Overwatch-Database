@@ -553,19 +553,20 @@ INSERT INTO `Events` VALUES (6,'Archives');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
-	`kind`	INTEGER
+	`kind`	INTEGER,
+	`source_link`	TEXT UNIQUE
 );
-INSERT INTO `Cut_Maps` VALUES (1,'Amazon',1);
-INSERT INTO `Cut_Maps` VALUES (2,'Berlin',1);
-INSERT INTO `Cut_Maps` VALUES (3,'Cairo',3);
-INSERT INTO `Cut_Maps` VALUES (4,'Galapagos',2);
-INSERT INTO `Cut_Maps` VALUES (5,'India',2);
-INSERT INTO `Cut_Maps` VALUES (6,'Iron Star',3);
-INSERT INTO `Cut_Maps` VALUES (7,'Kyoto Temple',2);
-INSERT INTO `Cut_Maps` VALUES (8,'London',1);
-INSERT INTO `Cut_Maps` VALUES (9,'San Joaquin',1);
-INSERT INTO `Cut_Maps` VALUES (10,'The Bayou',3);
-INSERT INTO `Cut_Maps` VALUES (11,'The Iris',2);
+INSERT INTO `Cut_Maps` VALUES (1,'Amazon',1,'overwatch.gamepedia.com/Amazon');
+INSERT INTO `Cut_Maps` VALUES (2,'Berlin',1,'overwatch.gamepedia.com/Berlin');
+INSERT INTO `Cut_Maps` VALUES (3,'Cairo',3,'overwatch.gamepedia.com/Cairo');
+INSERT INTO `Cut_Maps` VALUES (4,'Galapagos',2,'overwatch.gamepedia.com/Galapagos');
+INSERT INTO `Cut_Maps` VALUES (5,'India',2,'overwatch.gamepedia.com/India');
+INSERT INTO `Cut_Maps` VALUES (6,'Iron Star',3,'overwatch.gamepedia.com/Iron_Star');
+INSERT INTO `Cut_Maps` VALUES (7,'Kyoto Temple',2,'overwatch.gamepedia.com/Kyoto_Temple');
+INSERT INTO `Cut_Maps` VALUES (8,'London',1,'overwatch.gamepedia.com/London');
+INSERT INTO `Cut_Maps` VALUES (9,'San Joaquin',1,'overwatch.gamepedia.com/San_Joaquin');
+INSERT INTO `Cut_Maps` VALUES (10,'The Bayou',3,'overwatch.gamepedia.com/The_Bayou');
+INSERT INTO `Cut_Maps` VALUES (11,'The Iris',2,'overwatch.gamepedia.com/The_Iris_(map)');
 CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT
