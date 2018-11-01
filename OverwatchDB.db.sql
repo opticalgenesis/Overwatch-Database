@@ -58,6 +58,10 @@ INSERT INTO `Twitch_Streamers` VALUES (48,'Fissure','fissure_ow',12,9,10);
 INSERT INTO `Twitch_Streamers` VALUES (49,'JJoNak','jjonaklove',2,5,1);
 INSERT INTO `Twitch_Streamers` VALUES (50,'NorsePearl','norsepearl',24,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (51,'CuppCaake','cuppcaake',3,1,5);
+INSERT INTO `Twitch_Streamers` VALUES (52,'Gale Adelade','gale_adelade',1,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (53,'Danteh','danteh',24,23,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (54,'Sinatraa','sinatraa',23,16,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (55,'Kafeeeeee','kafeeeeee_ow',NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -542,14 +546,15 @@ CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
 );
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT UNIQUE
+	`name`	TEXT UNIQUE,
+	`link`	TEXT
 );
-INSERT INTO `Events` VALUES (1,'Winter Wonderland');
-INSERT INTO `Events` VALUES (2,'Halloween Terror');
-INSERT INTO `Events` VALUES (3,'Summer Games');
-INSERT INTO `Events` VALUES (4,'Aniversary');
-INSERT INTO `Events` VALUES (5,'Lunar New Year');
-INSERT INTO `Events` VALUES (6,'Archives');
+INSERT INTO `Events` VALUES (1,'Winter Wonderland','winter-wonderland');
+INSERT INTO `Events` VALUES (2,'Halloween Terror','halloween-terror');
+INSERT INTO `Events` VALUES (3,'Summer Games','summer-games');
+INSERT INTO `Events` VALUES (4,'Aniversary','anniversary');
+INSERT INTO `Events` VALUES (5,'Lunar New Year','lunar-new-year');
+INSERT INTO `Events` VALUES (6,'Archives','archives');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
