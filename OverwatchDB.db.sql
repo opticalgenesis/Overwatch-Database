@@ -537,6 +537,14 @@ INSERT INTO `Hero_Nationalities` VALUES (15,'British','United Kingdom');
 INSERT INTO `Hero_Nationalities` VALUES (16,'Irish','Ireland');
 INSERT INTO `Hero_Nationalities` VALUES (17,'Brazilian','Brazil');
 INSERT INTO `Hero_Nationalities` VALUES (18,'None','None');
+CREATE TABLE IF NOT EXISTS `Hero_Ability_Types` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE
+);
+INSERT INTO `Hero_Ability_Types` VALUES (1,'Passive Ability');
+INSERT INTO `Hero_Ability_Types` VALUES (2,'Ability');
+INSERT INTO `Hero_Ability_Types` VALUES (3,'Weapon');
+INSERT INTO `Hero_Ability_Types` VALUES (4,'Ultimate ability');
 CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER,
@@ -544,6 +552,12 @@ CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
 	`type`	INTEGER,
 	`description`	TEXT UNIQUE
 );
+INSERT INTO `Hero_Abilities` VALUES (1,24,'Opportunist',1,'Sombra detects critically injured enemies through walls.');
+INSERT INTO `Hero_Abilities` VALUES (2,24,'Machine Pistol',3,'Sombra’s fully-automatic machine pistol fires in a short-range spread.');
+INSERT INTO `Hero_Abilities` VALUES (3,24,'Hack',2,'Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to make them useless to her opponents.');
+INSERT INTO `Hero_Abilities` VALUES (4,24,'Stealth',2,'Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.');
+INSERT INTO `Hero_Abilities` VALUES (5,24,'Translocator',2,'Sombra tosses out a translocator beacon. She can instantly return to the beacon’s location while it is active (including when it’s in mid-flight).');
+INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',4,'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.');
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
