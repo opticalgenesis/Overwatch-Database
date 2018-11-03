@@ -62,6 +62,8 @@ INSERT INTO `Twitch_Streamers` VALUES (52,'Gale Adelade','gale_adelade',1,NULL,N
 INSERT INTO `Twitch_Streamers` VALUES (53,'Danteh','danteh',24,23,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (54,'Sinatraa','sinatraa',23,16,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (55,'Kafeeeeee','kafeeeeee_ow',NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (56,'Beeftipsy','beeftipsy',28,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (57,'Scullybb','scullybb',3,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
