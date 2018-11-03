@@ -565,15 +565,19 @@ INSERT INTO `Hero_Abilities` VALUES (2,24,'Machine Pistol',1,'Sombra’s fully-a
 INSERT INTO `Hero_Abilities` VALUES (3,24,'Hack',3,'Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to make them useless to her opponents.','Cooldown: 8 seconds (2 seconds if broken).','Max. range: 15 meters.','','','',NULL);
 INSERT INTO `Hero_Abilities` VALUES (4,24,'Stealth',3,'Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.','Duration: Infinite:','Cooldown: 6 seconds.','','','',NULL);
 INSERT INTO `Hero_Abilities` VALUES (5,24,'Translocator',3,'Sombra tosses out a translocator beacon. She can instantly return to the beacon’s location while it is active (including when it’s in mid-flight).','Duration: Infinite:','Cooldown: 4 seconds (2 seconds if cancelled).','','','','');
-INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',5,'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.',NULL,'','','','','');
-INSERT INTO `Hero_Abilities` VALUES (7,29,'The Viper',1,'Ashe''s semi-automatic rifle fires quick shots.',NULL,NULL,NULL,NULL,NULL,'true');
-INSERT INTO `Hero_Abilities` VALUES (8,29,'The Viper',2,'Ashe can use her aim-down sights for a more damaging, precise shot.','Machine Pistol',NULL,NULL,NULL,NULL,'true');
-INSERT INTO `Hero_Abilities` VALUES (9,29,'Dynamite',3,'Ashe throws an explosive that detonates after a short delay or immediately when shot. The explosion from Dynamite also lights enemies on fire, dealing damage over time.','Weapon (Primary Fire)',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',5,'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.','Area of effect: 15 meters.','','','','','');
+INSERT INTO `Hero_Abilities` VALUES (7,29,'The Viper',1,'Ashe''s semi-automatic rifle fires quick shots.','Ammo: 12.',NULL,NULL,NULL,NULL,'true');
+INSERT INTO `Hero_Abilities` VALUES (8,29,'The Viper',2,'Ashe can use her aim-down sights for a more damaging, precise shot.','Ammo: 12.',NULL,NULL,NULL,NULL,'true');
+INSERT INTO `Hero_Abilities` VALUES (9,29,'Dynamite',3,'Ashe throws an explosive that detonates after a short delay or immediately when shot. The explosion from Dynamite also lights enemies on fire, dealing damage over time.','Cooldown: 10 seconds.',NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (10,29,'Coach Gun
 ',3,'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.
 
-',NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `Hero_Abilities` VALUES (11,29,'B.O.B.',5,'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.','Icon',NULL,NULL,NULL,NULL,NULL);
+','Cooldown: 10 seconds.',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (11,29,'B.O.B.',5,'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.','Health: 1200.',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (12,1,'Biotic Rifle',1,'Ana’s rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle’s scope to zoom in on targets and make highly accurate shots.','Ammo: 14.','Damage: 70.','Healing: 75.',NULL,NULL,'');
+INSERT INTO `Hero_Abilities` VALUES (13,1,'Sleep Dart',3,'Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).','Cooldown: 12 seconds.','Damage: 5.',NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (14,1,'Biotic Grenade',3,'Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.','Cooldown: 10 seconds.','Damage: 60.','Healing: 100.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (15,1,'Nano Boost',5,'After Ana hits one of her allies with a combat boost, they deal more damage, take less damage from enemies’ attacks and is instantly healed.','Damage: +50%.','Healing: 300.','Damage reduction: 50%.','Duration: 8 seconds.',NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
