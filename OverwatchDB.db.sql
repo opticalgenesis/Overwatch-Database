@@ -492,7 +492,7 @@ INSERT INTO `Heroes` VALUES (10,'Orisa',3,200,200,0,2,'Orisa',1,18,'Your safety 
 INSERT INTO `Heroes` VALUES (11,'Roadhog',3,600,0,0,1,'Mako Rutledge',48,6,'I''m a one-man apocalypse.');
 INSERT INTO `Heroes` VALUES (12,'Winston',3,400,100,0,2,'Winston',29,18,'Imagination is the essence of discovery.');
 INSERT INTO `Heroes` VALUES (13,'Wrecking Ball',3,500,100,0,3,'Hammond',14,18,'Do not anger the hamster.');
-INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,18,'');
+INSERT INTO `Heroes` VALUES (14,'Bastion',2,200,100,0,1,'SST Laboratories Siege Automaton E54',30,18,'...');
 INSERT INTO `Heroes` VALUES (15,'Mei',2,250,0,0,3,'Mei-Ling Zhou',31,4,'Our world is worth fighting for.');
 INSERT INTO `Heroes` VALUES (16,'Doomfist',2,250,0,0,3,'Akande Ogundimu',45,14,'Only through conflict do we evolve.');
 INSERT INTO `Heroes` VALUES (17,'Genji',2,200,0,0,3,'Genji Shimada',35,2,'Even if I sacrifice my body, I will never sacrifice my honor.');
@@ -503,7 +503,7 @@ INSERT INTO `Heroes` VALUES (21,'Symmetra',2,100,0,100,2,'Satya Vaswani',28,3,'T
 INSERT INTO `Heroes` VALUES (22,'Torbjörn',2,200,0,0,2,'Torbjörn Lindholm',57,12,'Build ''em up, Break ''em down.');
 INSERT INTO `Heroes` VALUES (23,'Tracer',2,150,0,0,2,'Lena Oxton',26,15,'Cheers, love! The cavalry''s here!');
 INSERT INTO `Heroes` VALUES (24,'Sombra',2,200,0,0,3,'Olivia Colomar',30,13,'Everything can be hacked... and everyone.');
-INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison',0,1,'We''re all soldiers now.');
+INSERT INTO `Heroes` VALUES (25,'Soldier: 76',2,200,0,0,1,'John Francis "Jack" Morrison','',1,'We''re all soldiers now.');
 INSERT INTO `Heroes` VALUES (26,'Reaper',2,250,0,0,1,'Gabriel Reyes',58,1,'Death walks among you.');
 INSERT INTO `Heroes` VALUES (27,'Pharah',2,200,0,0,1,'Fareeha Amari',32,7,'I will protect the innocent.');
 INSERT INTO `Heroes` VALUES (28,'Widowmaker',2,200,0,0,2,'Amélie Lacroix (née Guillard)',33,9,'One shot, one kill.');
@@ -542,23 +542,38 @@ CREATE TABLE IF NOT EXISTS `Hero_Ability_Types` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
-INSERT INTO `Hero_Ability_Types` VALUES (1,'Passive Ability');
-INSERT INTO `Hero_Ability_Types` VALUES (2,'Ability');
-INSERT INTO `Hero_Ability_Types` VALUES (3,'Weapon');
-INSERT INTO `Hero_Ability_Types` VALUES (4,'Ultimate ability');
+INSERT INTO `Hero_Ability_Types` VALUES (1,'Weapon primary');
+INSERT INTO `Hero_Ability_Types` VALUES (2,'Weapon secondary');
+INSERT INTO `Hero_Ability_Types` VALUES (3,'Ability');
+INSERT INTO `Hero_Ability_Types` VALUES (4,'Passive ability');
+INSERT INTO `Hero_Ability_Types` VALUES (5,'Ultimate ability');
 CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER,
 	`name`	TEXT,
 	`type`	INTEGER,
-	`description`	TEXT UNIQUE
+	`description`	TEXT UNIQUE,
+	`detail_1`	TEXT,
+	`detail_2`	TEXT,
+	`detail_3`	TEXT,
+	`detail_4`	TEXT,
+	`detail_5`	TEXT,
+	`can_headshot`	TEXT
 );
-INSERT INTO `Hero_Abilities` VALUES (1,24,'Opportunist',1,'Sombra detects critically injured enemies through walls.');
-INSERT INTO `Hero_Abilities` VALUES (2,24,'Machine Pistol',3,'Sombra’s fully-automatic machine pistol fires in a short-range spread.');
-INSERT INTO `Hero_Abilities` VALUES (3,24,'Hack',2,'Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to make them useless to her opponents.');
-INSERT INTO `Hero_Abilities` VALUES (4,24,'Stealth',2,'Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.');
-INSERT INTO `Hero_Abilities` VALUES (5,24,'Translocator',2,'Sombra tosses out a translocator beacon. She can instantly return to the beacon’s location while it is active (including when it’s in mid-flight).');
-INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',4,'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.');
+INSERT INTO `Hero_Abilities` VALUES (1,24,'Opportunist',4,'Sombra detects critically injured enemies through walls.','Opportunist detects enemies below 50% health.','Reveals enemy health bars that are below 100% to Sombra only, without requiring Sombra to have dealt any damage to them.','','',NULL,'');
+INSERT INTO `Hero_Abilities` VALUES (2,24,'Machine Pistol',1,'Sombra’s fully-automatic machine pistol fires in a short-range spread.','Ammo: 60.',NULL,'','',NULL,'true');
+INSERT INTO `Hero_Abilities` VALUES (3,24,'Hack',3,'Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to make them useless to her opponents.','Cooldown: 8 seconds (2 seconds if broken).','Max. range: 15 meters.','','','',NULL);
+INSERT INTO `Hero_Abilities` VALUES (4,24,'Stealth',3,'Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.','Duration: Infinite:','Cooldown: 6 seconds.','','','',NULL);
+INSERT INTO `Hero_Abilities` VALUES (5,24,'Translocator',3,'Sombra tosses out a translocator beacon. She can instantly return to the beacon’s location while it is active (including when it’s in mid-flight).','Duration: Infinite:','Cooldown: 4 seconds (2 seconds if cancelled).','','','','');
+INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',5,'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.',NULL,'','','','','');
+INSERT INTO `Hero_Abilities` VALUES (7,29,'The Viper',1,'Ashe''s semi-automatic rifle fires quick shots.',NULL,NULL,NULL,NULL,NULL,'true');
+INSERT INTO `Hero_Abilities` VALUES (8,29,'The Viper',2,'Ashe can use her aim-down sights for a more damaging, precise shot.','Machine Pistol',NULL,NULL,NULL,NULL,'true');
+INSERT INTO `Hero_Abilities` VALUES (9,29,'Dynamite',3,'Ashe throws an explosive that detonates after a short delay or immediately when shot. The explosion from Dynamite also lights enemies on fire, dealing damage over time.','Weapon (Primary Fire)',NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (10,29,'Coach Gun
+',3,'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.
+
+',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (11,29,'B.O.B.',5,'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.','Icon',NULL,NULL,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
@@ -596,20 +611,22 @@ INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	INTEGER NOT NULL,
+	`name`	INTEGER NOT NULL UNIQUE,
 	`link`	TEXT UNIQUE,
 	`year`	INTEGER,
 	`hero_1`	INTEGER,
 	`hero_2`	INTEGER,
-	`hero_3`	INTEGER
+	`hero_3`	INTEGER,
+	`online_preview_link`	TEXT UNIQUE
 );
-INSERT INTO `Cinematics` VALUES (1,'Infiltration','https://youtu.be/Og5-Pm4HNlI',2016,24,26,28);
-INSERT INTO `Cinematics` VALUES (2,'Honor and Glory','https://youtu.be/sQfk5HykiEk',2018,9,4,NULL);
-INSERT INTO `Cinematics` VALUES (3,'Shooting Star','https://youtu.be/q7j2d6YCQbg',2018,7,NULL,NULL);
-INSERT INTO `Cinematics` VALUES (4,'Rise and Shine','https://youtu.be/8tjcm_kI0n0',2017,15,NULL,NULL);
-INSERT INTO `Cinematics` VALUES (5,'The Last Bastion','https://youtu.be/to8yh83jlXg',2016,14,NULL,NULL);
-INSERT INTO `Cinematics` VALUES (6,'Hero','https://youtu.be/cPRRupAM4DI',2016,25,NULL,NULL);
-INSERT INTO `Cinematics` VALUES (7,'Dragons','https://youtu.be/oJ09xdxzIJQ',2016,18,17,NULL);
-INSERT INTO `Cinematics` VALUES (8,'Alive','https://youtu.be/U130wnpi-C0',2016,28,23,NULL);
-INSERT INTO `Cinematics` VALUES (9,'Recall','https://youtu.be/sB5zlHMsM7k',2016,12,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (1,'Infiltration','https://youtu.be/Og5-Pm4HNlI',2016,24,26,28,NULL);
+INSERT INTO `Cinematics` VALUES (2,'Honor and Glory','https://youtu.be/sQfk5HykiEk',2018,9,4,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (3,'Shooting Star','https://youtu.be/q7j2d6YCQbg',2018,7,NULL,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (4,'Rise and Shine','https://youtu.be/8tjcm_kI0n0',2017,15,NULL,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (5,'The Last Bastion','https://youtu.be/to8yh83jlXg',2016,14,NULL,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (6,'Hero','https://youtu.be/cPRRupAM4DI',2016,25,NULL,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (7,'Dragons','https://youtu.be/oJ09xdxzIJQ',2016,18,17,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (8,'Alive','https://youtu.be/U130wnpi-C0',2016,28,23,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (9,'Recall','https://youtu.be/sB5zlHMsM7k',2016,12,NULL,NULL,NULL);
+INSERT INTO `Cinematics` VALUES (10,'Reunion','https://youtu.be/PKYVvPNhRR0',2018,20,29,NULL,NULL);
 COMMIT;
