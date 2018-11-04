@@ -615,6 +615,18 @@ CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
 INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
 INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
+CREATE TABLE IF NOT EXISTS `Comps` (
+	`id`	INTEGER NOT NULL UNIQUE,
+	`name`	TEXT NOT NULL UNIQUE,
+	`hero_1`	INTEGER NOT NULL,
+	`hero_2`	INTEGER NOT NULL,
+	`hero_3`	INTEGER NOT NULL,
+	`hero_4`	INTEGER NOT NULL,
+	`hero_5`	INTEGER NOT NULL,
+	`hero_6`	INTEGER NOT NULL,
+	`alternative_1`	INTEGER,
+	`alternative_2`	INTEGER
+);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
