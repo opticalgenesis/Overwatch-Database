@@ -571,8 +571,7 @@ INSERT INTO `Hero_Abilities` VALUES (6,24,'EMP',5,'Sombra discharges electromagn
 INSERT INTO `Hero_Abilities` VALUES (7,29,'The Viper',1,'Ashe''s semi-automatic rifle fires quick shots.','Ammo: 12.',NULL,NULL,NULL,NULL,'true');
 INSERT INTO `Hero_Abilities` VALUES (8,29,'The Viper',2,'Ashe can use her aim-down sights for a more damaging, precise shot.','Ammo: 12.',NULL,NULL,NULL,NULL,'true');
 INSERT INTO `Hero_Abilities` VALUES (9,29,'Dynamite',3,'Ashe throws an explosive that detonates after a short delay or immediately when shot. The explosion from Dynamite also lights enemies on fire, dealing damage over time.','Cooldown: 10 seconds.',NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `Hero_Abilities` VALUES (10,29,'Coach Gun
-',3,'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.
+INSERT INTO `Hero_Abilities` VALUES (10,29,'Coach Gun',3,'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.
 
 ','Cooldown: 10 seconds.',NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (11,29,'B.O.B.',5,'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.','Health: 1200.',NULL,NULL,NULL,NULL,NULL);
