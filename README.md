@@ -1,4 +1,4 @@
-# Overwatch Item Database
+# Overwatch Database
 
 Database of everything in Overwatch.
 
