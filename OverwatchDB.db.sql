@@ -76,6 +76,15 @@ INSERT INTO `Twitch_Streamers` VALUES (65,'Yuuie','yuuie',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (66,'Reinforce','reinforce',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (67,'PvPTwitch','pvptwitch',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (68,'Vale','vale',3,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (69,'Chipsa','chipsaow',16,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (70,'Effect','eff2ct',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (71,'Hydration','hydration',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (72,'Surefour','surefour',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (73,'Wanted','wantedow',20,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (74,'AkM','akm_tv',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (75,'Mangachu','mangachu',27,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (76,'Spirit','spiritow',26,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (77,'Desrow','desrowfighting',22,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -97,7 +106,11 @@ INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
 INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','');
-INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','?','1',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','Justice','1',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Special_Items` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT,
@@ -163,6 +176,7 @@ INSERT INTO `Overwatch_League_Countries` VALUES (2,'South Korea');
 INSERT INTO `Overwatch_League_Countries` VALUES (3,'England');
 INSERT INTO `Overwatch_League_Countries` VALUES (4,'China');
 INSERT INTO `Overwatch_League_Countries` VALUES (5,'Canada');
+INSERT INTO `Overwatch_League_Countries` VALUES (6,'France');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Cities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
@@ -181,6 +195,10 @@ INSERT INTO `Overwatch_League_Cities` VALUES (11,'San Francisco');
 INSERT INTO `Overwatch_League_Cities` VALUES (12,'Atlanta');
 INSERT INTO `Overwatch_League_Cities` VALUES (13,'Toronto');
 INSERT INTO `Overwatch_League_Cities` VALUES (14,'Washington D.C.');
+INSERT INTO `Overwatch_League_Cities` VALUES (15,'Paris');
+INSERT INTO `Overwatch_League_Cities` VALUES (16,'Chengdu');
+INSERT INTO `Overwatch_League_Cities` VALUES (17,'Guangzhou');
+INSERT INTO `Overwatch_League_Cities` VALUES (18,'Hangzhou');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER UNIQUE,
