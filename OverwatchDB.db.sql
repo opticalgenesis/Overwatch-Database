@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `Overwatch_League_Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
-INSERT INTO `Overwatch_League_Events` VALUES (1,' Overwatch League All-Access Pass');
+INSERT INTO `Overwatch_League_Events` VALUES (1,'Overwatch League All-Access Pass');
 INSERT INTO `Overwatch_League_Events` VALUES (2,'Overwatch League All-Star Weekend');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -352,7 +352,7 @@ INSERT INTO `Items` VALUES (100,'Meditate',2,4,2,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (101,'Round of Applause',2,4,2,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (102,'Taunt',2,4,2,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (103,'Tickled',2,4,2,NULL,NULL,NULL);
-INSERT INTO `Items` VALUES (104,'Dance',2,4,2,4,9999,NULL);
+INSERT INTO `Items` VALUES (104,'Dance',2,4,2,4,2017,NULL);
 INSERT INTO `Items` VALUES (105,'Snowflake',2,4,2,1,9999,NULL);
 INSERT INTO `Items` VALUES (106,'Heroic',2,2,1,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (107,'Focused',2,2,2,NULL,NULL,NULL);
