@@ -111,19 +111,6 @@ INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL);
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Special_Items` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT,
-	`hero`	INTEGER NOT NULL,
-	`kind`	INTEGER NOT NULL,
-	`event`	INTEGER,
-	`year`	INTEGER,
-	`token_price`	INTEGER,
-	`owl_team`	INTEGER
-);
-INSERT INTO `Overwatch_League_Special_Items` VALUES (1,'Dance Party',6,3,1,2018,200,NULL);
-INSERT INTO `Overwatch_League_Special_Items` VALUES (2,'Pacific',17,1,2,2018,200,NULL);
-INSERT INTO `Overwatch_League_Special_Items` VALUES (3,'Atlantic',23,1,2,2018,200,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -148,13 +135,19 @@ INSERT INTO `Overwatch_League_Players` VALUES (14,'Pokpo',13,'Park Hyun-jun',3);
 INSERT INTO `Overwatch_League_Players` VALUES (15,'Masaa',13,'Petja Kantanen',1);
 INSERT INTO `Overwatch_League_Players` VALUES (16,'envy',14,'Lee Kang-jae',3);
 INSERT INTO `Overwatch_League_Players` VALUES (17,'Neko',14,'Park Se-hyeon',1);
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Item_Kinds` (
+CREATE TABLE IF NOT EXISTS `Overwatch_League_Items` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT NOT NULL UNIQUE
+	`name`	TEXT,
+	`hero`	INTEGER NOT NULL,
+	`kind`	INTEGER NOT NULL,
+	`event`	INTEGER,
+	`year`	INTEGER,
+	`token_price`	INTEGER,
+	`owl_team`	INTEGER
 );
-INSERT INTO `Overwatch_League_Item_Kinds` VALUES (1,'OWL team skin');
-INSERT INTO `Overwatch_League_Item_Kinds` VALUES (2,'OWL team AWAY skin');
-INSERT INTO `Overwatch_League_Item_Kinds` VALUES (3,'Emote');
+INSERT INTO `Overwatch_League_Items` VALUES (1,'Dance Party',6,4,'',2018,200,NULL);
+INSERT INTO `Overwatch_League_Items` VALUES (2,'Pacific',17,1,2,2018,200,NULL);
+INSERT INTO `Overwatch_League_Items` VALUES (3,'Atlantic',23,1,2,2018,200,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
