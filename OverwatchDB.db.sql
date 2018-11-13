@@ -74,7 +74,7 @@ INSERT INTO `Twitch_Streamers` VALUES (63,'Gibi','gggibi',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (64,'Muma','muma',9,12,10,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (65,'Yuuie','yuuie',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (66,'Reinforce','reinforce',NULL,NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (67,'PvPTwitch','pvptwitch',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (67,'PvPTwitch','pvptwitch',19,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (68,'Vale','vale',3,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (69,'Chipsa','chipsaow',16,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (70,'Effect','eff2ct',NULL,NULL,NULL,NULL);
@@ -86,6 +86,9 @@ INSERT INTO `Twitch_Streamers` VALUES (75,'Mangachu','mangachu',27,NULL,NULL,NUL
 INSERT INTO `Twitch_Streamers` VALUES (76,'Spirit','spiritow',26,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (77,'Desrow','desrowfighting',22,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (78,'PinkFluffyUnicorn','pinkfluffyunicorntv',24,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (79,'Necros','necros',17,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (80,'Chro','prolikechro',19,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (81,'Joooomla25cm ','j0000mla25',28,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -497,6 +500,27 @@ INSERT INTO `Items` VALUES (253,'Drop the Beat',6,2,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (254,'Freestyle',6,2,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (255,'In the Groove',6,2,3,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (256,'Bicycle Kick',6,2,3,3,2016,NULL);
+INSERT INTO `Items` VALUES (258,'Classic',29,1,1,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (259,'Paintbrush',29,1,2,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (260,'Sunflower',29,1,2,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (261,'Tansy',29,1,2,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (262,'Yucca',29,1,2,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (263,'Posh',29,1,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (264,'Thorn',29,1,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (265,'Gangster',29,1,4,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (266,'Mobster',29,1,4,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (267,'Jungle',29,1,4,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (268,'Safari',29,1,4,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (269,'Heroic',29,4,1,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (270,'Dynamite',29,4,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (271,'Flourish',29,4,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (272,'Laugh',29,4,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (273,'Slow Clap',29,4,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (274,'Take a Knee',29,4,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (275,'Heroic',29,2,1,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (276,'Ashe and Bob',29,2,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (277,'Bullet Walk',29,2,3,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (278,'Standoff',29,2,3,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`Name`	TEXT UNIQUE,
@@ -682,6 +706,12 @@ INSERT INTO `Hero_Abilities` VALUES (63,18,'Sonic Arrow',3,'Hanzo launches an ar
 INSERT INTO `Hero_Abilities` VALUES (64,18,'Storm Arrows',3,'Hanzo’s next several arrows fire instantly, but at reduced damage.','Damage: 70 per shot.','Cooldown: 10 seconds.','Can headshot.','All arrows fired during the ability''s duration will be at full charge.','Unlike the standard Storm Bow, the arrows will be instantly fired. Hanzo also does not suffer any movement speed decrease.','If the ability runs out of time (indicated in the UI) it will go on cooldown.','Ammo: 6.','Rate of fire: 1 shot every 0.3 seconds (3.33 shots per second).');
 INSERT INTO `Hero_Abilities` VALUES (65,18,'Dragonstrike',5,'Hanzo summons a Spirit Dragon which travels through the air in a line. It passes through walls in its way, devouring any enemies it encounters.','Damage: Initial shot 125, dragons 150 per dragon.','Max range: Infinite travel distance.','Area of effect: 4 meters radius.','Initial shot can headshot.','Casting time: 1.4 seconds (initial animation) 
 0.6 seconds (arrow).','If shot directly and the target is still, the damage will last for 3.5 seconds.','The hitbox is actually both dragons, meaning the ultimate deals less damage at the edges, and combined at the center.',NULL);
+INSERT INTO `Hero_Abilities` VALUES (66,8,'Energy',4,'Damage blocked increases Particle Cannon damage.','Energy increases the damage of both firing modes, but not that of Graviton Surge.','Damage: +1% per point of energy.','Ammo: 100 point of energy.','Ammo usage: -1.6 point of energy per second.','Reload time: +1 point of energy per 5 of damage obsorbed.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (67,8,'Particle Cannon',1,'Zarya’s mighty Particle Cannon unleashes a short-range beam of destructive energy.','Reload time 1.5 seconds.','Damage: 95 per second.','Can''t headshot.','The beam ignores Genji''s Deflect and D.Va''s Defense Matrix.','Ammo: 100.','Max. range: 16 meters.',NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (68,8,'Particle Cannon',2,'Alternatively, Zarya can lob an explosive charge to strike multiple opponents.','Area of effect: 2 meters.','Ammo usage: 25 rounds per shot.','Can''t headshot.','Energy level increases explosion radius.','Damage: 45 per shot.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (69,8,'Particle Barrier',3,'The Particle Cannon can emit a personal barrier that shields Zarya against incoming attacks, redirecting their energy to enhance her weapon’s damage and the width of its beam.','Health: 200 barrier.','Duration: 2 seconds.','Particle Barrier behaves differently compared to normal barriers, acting more like additional Health than Reinhardt''s Barrier Field. Damage and effects from attacks that normally pass through a barrier, such as Winston''s Tesla Cannon, will still be absorbed by Particle Barrier.','As long as Particle Barrier has at least 1 Health worth of absorption left, it will prevent all incoming negative effects, no matter their damage.','The ability will not protect Zarya from knockback.','Cooldown: 10 seconds.',NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (70,8,'Projected Barrier',3,'Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.','Health: 200 barrier.','Duration: 2 seconds.','Projected Barrier behaves identically to Particle Barrier. For more ability details, see Particle Barrier.','Cooldown: 8 seconds.',NULL,'',NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (71,8,'Graviton Surge',5,'Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they’re trapped.','Most movement abilities, such as Tracer''s Blink, are disabled within the effect of Graviton Surge.','Damage: 5.5 per second.','Area of effect: 6 meters.','Duration: 4 seconds.','Projectile speed: 23.5 meters per second.',NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
