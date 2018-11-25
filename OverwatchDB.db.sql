@@ -718,6 +718,11 @@ INSERT INTO `Hero_Abilities` VALUES (74,14,'Configuration: Sentry',2,'In Sentry 
 INSERT INTO `Hero_Abilities` VALUES (75,14,'Reconfigure',3,'Bastion transforms between its two primary combat modes to adapt to battlefield conditions.','Casting time: 1 second (into Sentry), 0.5 seconds (into Recon).','Cooldown: none.','Bastion can use reconfigure while in the air.','After 2 seconds, Reconfigure will reload Bastion''s weapons.',NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (76,14,'Self-Repair',3,'Bastion restores its health; it cannot fire weapons while the repair process is in effect.','Healing: 75 per second.','Casting time: 0.5 second delay.','Duration: up to 4 seconds.','Cooldown: 1 seconds, 7 seconds recharging.','Bastion cannot activate Self-Repair when the resource meter is below 20%.',NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (77,14,'Configuration: Tank',5,'In Tank mode, Bastion extends wheeled treads and a powerful long-range cannon. The cannon’s explosive shells demolish targets in a wide blast radius, but Bastion can only remain in this mode for a limited time.','Damage: 205 (direct hit), 35 (self damage).','Area of effect: 4 meters radius.','Ammo: Infinite.','Can''t headshot.','Rate of fire: 1.11 rounds per second.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (78,7,'Fusion Cannons',1,'D.Va''s mech is equipped with twin short-range rotating cannons. They lay down continuous, high-damage fire without needing to reload, but slow D.Va’s movement while they’re active.','Damage: 0.6 - 2.','Falloff range: 10 to 20 meters.','Ammo: Infinite.','Can headshot.',NULL,NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (79,7,'Defense Matrix',3,'D.Va can activate this forward-facing targeting array to shoot incoming projectiles out of the air.','Max. range: 15 meters.','Duration: Up to 2 seconds (fully charged).','Cooldown: 1 second (8 seconds recharging).','D.Va cannot use Fusion Cannons while the ability is active, but she can use Micro Missiles.','Cooldown starts 1 second after ability is cancelled.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (80,7,'Boosters',3,'D.Va’s mech launches into the air, her momentum carrying her forward. She can turn and change directions or barrel through her enemies, knocking them back.','Damage: 10.','Move. speed: 12.5 meters per second.','Duration: Up to 2 seconds.','Can''t headshot.','Cooldown: 5 seconds.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (81,7,'Micro Missiles',3,'D.Va launches a volley of explosive rockets.','Dealing up to 126 total damage.','Can be used in all other actions.','Can''t headshot.','Cooldown: 8 seconds.','Damage: Direct hit: 7 Per Missile, Splash max: 4 Per Missile, Splash min: 2 Per Missile, Self: 4 Per Missile.','Ammo: 18.',NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (82,7,'Self-Destruct',5,'D.Va ejects from her mech and sets its reactor to explode, dealing massive damage to nearby opponents.','The explosion does not deal damage to the casting D.Va.','The detonating mech will retain the momentum from Boosters.','Damage: 1000.','Area of effect: 20 meter radius.','Casting time: 3 seconds fuse.','Can''t headshot.',NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
@@ -755,6 +760,7 @@ INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
 CREATE TABLE IF NOT EXISTS `Comps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`info`	TEXT,
 	`name`	TEXT NOT NULL UNIQUE,
 	`hero_1`	INTEGER NOT NULL,
 	`hero_2`	INTEGER NOT NULL,
@@ -769,8 +775,8 @@ CREATE TABLE IF NOT EXISTS `Comps` (
 	`alternative_5`	INTEGER,
 	`alternative_6`	INTEGER
 );
-INSERT INTO `Comps` VALUES (1,'GOATS',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `Comps` VALUES (2,'Dive',23,17,2,3,7,12,24,5,6,NULL,NULL,NULL);
+INSERT INTO `Comps` VALUES (1,'GOATS comp includes 3 tanks and three healers.','GOATS',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Comps` VALUES (2,'Dive includes high mobility heroes.','Dive',23,17,2,3,7,12,24,5,6,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
