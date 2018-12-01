@@ -89,6 +89,7 @@ INSERT INTO `Twitch_Streamers` VALUES (78,'PinkFluffyUnicorn','pinkfluffyunicorn
 INSERT INTO `Twitch_Streamers` VALUES (79,'Necros','necros',17,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (80,'Chro','prolikechro',19,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (81,'Joooomla25cm ','j0000mla25',28,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (82,'WorstSombra','worstsombra',24,4,16,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
