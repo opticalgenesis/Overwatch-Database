@@ -95,27 +95,30 @@ CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`city`	TEXT NOT NULL,
 	`name`	TEXT NOT NULL UNIQUE,
 	`country`	TEXT NOT NULL,
-	`Division`	INTEGER
+	`division`	INTEGER,
+	`color_hex_1`	INTEGER,
+	`color_hex_2`	INTEGER,
+	`color_hex_3`	INTEGER
 );
-INSERT INTO `Overwatch_League_Teams` VALUES (1,'1','Spitfire','3',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (2,'2','Dragons','4',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (3,'3','Fusion','1',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (4,'4','Valiant','1',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (5,'5','Outlaws','1',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (6,'6','Excelsior','1',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (7,'7','Fuel','1',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (8,'8','Dynasty','2',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2);
-INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1);
-INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','');
-INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','Justice','1',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL);
-INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (1,'1','Spitfire','3',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (2,'2','Dragons','4',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (3,'3','Fusion','1',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (4,'4','Valiant','1',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (5,'5','Outlaws','1',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (6,'6','Excelsior','1',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (7,'7','Fuel','1',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (8,'8','Dynasty','2',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','',NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','Justice','1',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
