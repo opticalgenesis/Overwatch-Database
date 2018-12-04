@@ -119,6 +119,7 @@ INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL,NULL,NUL
 INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL,NULL,NULL,NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL,NULL,NULL,NULL);
 INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL,NULL,NULL,NULL);
+INSERT INTO `Overwatch_League_Teams` VALUES (20,'19','Titans','5',NULL,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
@@ -200,6 +201,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (15,'Paris');
 INSERT INTO `Overwatch_League_Cities` VALUES (16,'Chengdu');
 INSERT INTO `Overwatch_League_Cities` VALUES (17,'Guangzhou');
 INSERT INTO `Overwatch_League_Cities` VALUES (18,'Hangzhou');
+INSERT INTO `Overwatch_League_Cities` VALUES (19,'Vancouver');
 CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER UNIQUE,
