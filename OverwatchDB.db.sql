@@ -13,7 +13,7 @@ INSERT INTO `Twitch_Streamers` VALUES (2,'FitzyHere','fitzyhere',24,15,1,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,4,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (4,'Dafran','dafran',23,25,28,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (5,'SPREE','spree',8,NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (6,'xQc','xqcow',1,9,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (6,'xQc','xqcow',12,9,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (7,'kephrii','kephrii',28,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (8,'Emongg','emongg',7,8,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (9,'Jardio','jardio',15,24,25,NULL);
