@@ -96,26 +96,26 @@ CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`name`	TEXT NOT NULL UNIQUE,
 	`country`	TEXT NOT NULL,
 	`division`	INTEGER,
-	`color_hex_1`	INTEGER,
-	`color_hex_2`	INTEGER,
-	`color_hex_3`	INTEGER
+	`color_hex_1`	TEXT,
+	`color_hex_2`	TEXT,
+	`color_hex_3`	TEXT
 );
 INSERT INTO `Overwatch_League_Teams` VALUES (1,'1','Spitfire','3',2,'59CAE8','1B2B3A','FF8201');
-INSERT INTO `Overwatch_League_Teams` VALUES (2,'2','Dragons','4',1,'D22730',0,'FCE300');
-INSERT INTO `Overwatch_League_Teams` VALUES (3,'3','Fusion','1',2,'F89D2A',0,'FFFFFF');
-INSERT INTO `Overwatch_League_Teams` VALUES (4,'4','Valiant','1',1,'2A7230',0,'E5D661');
-INSERT INTO `Overwatch_League_Teams` VALUES (5,'5','Outlaws','1',2,'96CA4E',0,'FFFFFF');
+INSERT INTO `Overwatch_League_Teams` VALUES (2,'2','Dragons','4',1,'D22730','000000','FCE300');
+INSERT INTO `Overwatch_League_Teams` VALUES (3,'3','Fusion','1',2,'F89D2A','000000','FFFFFF');
+INSERT INTO `Overwatch_League_Teams` VALUES (4,'4','Valiant','1',1,'2A7230','000000','E5D661');
+INSERT INTO `Overwatch_League_Teams` VALUES (5,'5','Outlaws','1',2,'96CA4E','000000','FFFFFF');
 INSERT INTO `Overwatch_League_Teams` VALUES (6,'6','Excelsior','1',2,'181C39','2B58E9','F22431');
 INSERT INTO `Overwatch_League_Teams` VALUES (7,'7','Fuel','1',1,'0B233F','0071CD','9EA2A3');
-INSERT INTO `Overwatch_League_Teams` VALUES (8,'8','Dynasty','2',1,0,'9EA2A3','FFFFFF');
-INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2,'FEDC01','AF282F',0);
-INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2,'174B97',0,'EEDF00');
+INSERT INTO `Overwatch_League_Teams` VALUES (8,'8','Dynasty','2',1,'000000','9EA2A3','FFFFFF');
+INSERT INTO `Overwatch_League_Teams` VALUES (9,'9','Mayhem','1',2,'FEDC01','AF282F','000000');
+INSERT INTO `Overwatch_League_Teams` VALUES (10,'10','Uprising','1',2,'174B97','000000','EEDF00');
 INSERT INTO `Overwatch_League_Teams` VALUES (11,'11','Shock','1',1,'FC4C01','60636A','D7C152');
-INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1,381360,0,'FFFFFF');
-INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL,'C4C4C4',323232,'910F1B');
-INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','','FFAA1C',0,'C20022');
-INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','Justice','1',NULL,990034,3768,'FFFFFF');
-INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL,'FDA100','B4936A',161824);
+INSERT INTO `Overwatch_League_Teams` VALUES (12,'4','Gladiators','1',1,'381360','000000','FFFFFF');
+INSERT INTO `Overwatch_League_Teams` VALUES (13,'12','Reign','1',NULL,'C4C4C4','323232','910F1B');
+INSERT INTO `Overwatch_League_Teams` VALUES (14,'13','Defiant','5','','FFAA1C','000000','C20022');
+INSERT INTO `Overwatch_League_Teams` VALUES (15,'14','Justice','1',NULL,'990034','003768','FFFFFF');
+INSERT INTO `Overwatch_League_Teams` VALUES (16,'16','Hunters','4',NULL,'FDA100','B4936A','161824');
 INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',NULL,'2F3D57','8D052D','FFAA1C');
 INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',NULL,'FA7298','5887CF','FFFFFF');
 INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',NULL,'122D42','67A2B2','25F2D4');
@@ -657,7 +657,7 @@ INSERT INTO `Hero_Abilities` VALUES (9,29,'Dynamite',3,'Ashe throws an explosive
 INSERT INTO `Hero_Abilities` VALUES (10,29,'Coach Gun',3,'Ashe blasts enemies in front of her, knocking them away and propelling herself backward for added mobility.','Cooldown: 10 seconds.','The bullets do not need to hit anything in order to apply the knock back to Ashe.',NULL,'',NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (11,29,'B.O.B.',5,'Ashe summons her trusted omnic sidekick, B.O.B., who charges forward and knocks enemies into the air, then lays down suppressing fire with his arm cannons.','Health: 1200.','Damage: 120 impact (charge), ~80 damage per second, 14 damage per bullet.','Duration: 10 seconds (after collision).','If B.O.B. bumps into an enemy (or enemies), B.O.B. flings them into the air.','B.O.B. can be healed, buffed (e.g. Nano Boost) and debuffed (e.g. Sleep Dart), and can even contest/capture objectives.','Damaging B.O.B. does not give the enemy team ultimate charge.',NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (12,1,'Biotic Rifle',1,'Ana’s rifle shoots darts that can restore health to her allies or deal ongoing damage to her enemies. She can use the rifle’s scope to zoom in on targets and make highly accurate shots.','Ammo: 14.','Healing: 75.','Damage: 70.','Reload time: 1.5 seconds.','Can''t headshot.',NULL,NULL,NULL);
-INSERT INTO `Hero_Abilities` VALUES (13,1,'Sleep Dart',3,'Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).','Cooldown: 12 seconds.','Damage: 5.','Projectile speed: 60 meters per second.','After taking damage, the target will take 0.5 seconds to become active again.','Sleep dart does not affect Torbjörn''s or Symmetra''s turrets.',NULL,NULL,NULL);
+INSERT INTO `Hero_Abilities` VALUES (13,1,'Sleep Dart',3,'Ana fires a dart from her sidearm, rendering an enemy unconscious (though any damage will rouse them).','Cooldown: 12 seconds.','Damage: 5.','Projectile speed: 60 meters per second.','After taking damage, the target will take 0.5 seconds to become active again.','Sleep dart does not affect Torbjörn''s or Symmetra''s turrets.','Duration: 5.5 seconds.',NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (14,1,'Biotic Grenade',3,'Ana tosses a biotic bomb that deals damage to enemies and heals allies in a small area of effect. Affected allies briefly receive increased healing from all sources, while enemies caught in the blast cannot be healed for a few moments.','Cooldown: 10 seconds.','Damage: 60 + Blocks healing taken.','Projectile speed: 40 meters per second.','Duration: 4 seconds.','Healing: 100 + +50% healing from other sources.','"Healing from other sources" includes health packs.',NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (15,1,'Nano Boost',5,'After Ana hits one of her allies with a combat boost, they deal more damage, take less damage from enemies’ attacks and is instantly healed.','Damage: +50%.','Healing: 300.','Damage reduction: 50%.','Duration: 8 seconds.','Damage reduction does not stack with other damage reduction abilities, as it is capped at 50%.',NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (16,5,'Biotic Grasp',1,'Using her left hand, Moira expends biotic energy to heal allies in front of her.','Healing: 80 health per second.','Heals 50 health over 3 seconds after Moira stops healing.','Max. range: 15 meters.','Reload time: +24 energy per second (+10 energy per second while using secendary fire).','Does not go through enemy barriers.','Both the direct and over time healing from Biotic Grasp can heal multiple allies.',NULL,NULL);
