@@ -73,7 +73,7 @@ INSERT INTO `Twitch_Streamers` VALUES (62,'TwoMad','twomad',NULL,NULL,NULL,NULL)
 INSERT INTO `Twitch_Streamers` VALUES (63,'Gibi','gggibi',NULL,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (64,'Muma','muma',9,12,10,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (65,'Yuuie','yuuie',NULL,NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (66,'Reinforce','reinforce',NULL,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (66,'Reinforce','reinforce',9,12,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (67,'PvPTwitch','pvptwitch',19,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (68,'Vale','vale',3,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (69,'Chipsa','chipsaow',16,NULL,NULL,NULL);
@@ -90,6 +90,20 @@ INSERT INTO `Twitch_Streamers` VALUES (80,'Chro','prolikechro',19,NULL,NULL,NULL
 INSERT INTO `Twitch_Streamers` VALUES (81,'Joooomla25cm ','j0000mla25',28,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (82,'WorstSombra','worstsombra',24,4,16,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (83,'Cloneman16','cloneman16',9,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (84,'AnneDro','annedro',9,8,13,NULL);
+CREATE TABLE IF NOT EXISTS `Team_Comps` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	INTEGER NOT NULL,
+	`hero_1`	INTEGER NOT NULL,
+	`hero_2`	INTEGER NOT NULL,
+	`hero_3`	INTEGER NOT NULL,
+	`hero_4`	INTEGER NOT NULL,
+	`hero_5`	INTEGER NOT NULL,
+	`hero_6`	INTEGER NOT NULL,
+	`info`	TEXT
+);
+INSERT INTO `Team_Comps` VALUES (1,'Quad Tank',5,6,7,8,9,10,'When looking to secure a point quickly, the Quad Tank can be a good strategy. Because of its abnormality, most opposing teams would not expect four high health characters to rush the point. With two solid healers to back them up, a team of four tanks can easily push back even a decent team holding a point. Keep in mind this stat works best when the enemy team does not expect it.');
+INSERT INTO `Team_Comps` VALUES (2,'Death Ball',1,6,9,11,20,25,'It’s all the name. For teams looking to move quickly and swarm an enemy team, try the Death Ball strat. The secret sauce of this comp is made up of Lucio’s speed. Reinhardt’s shield, and a whole lot of hitscan DPS potential. If you have DPS teammates with great accuracy, roll out the death ball.');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
