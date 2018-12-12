@@ -131,10 +131,16 @@ CREATE TABLE IF NOT EXISTS `Team_Comps` (
 	`hero_4`	INTEGER NOT NULL,
 	`hero_5`	INTEGER NOT NULL,
 	`hero_6`	INTEGER NOT NULL,
-	`info`	TEXT
+	`alternative_1`	INTEGER,
+	`alternative_2`	INTEGER,
+	`alternative_3`	INTEGER,
+	`alternative_4`	INTEGER,
+	`alternative_5`	INTEGER,
+	`alternative_6`	INTEGER,
+	`description`	TEXT
 );
-INSERT INTO `Team_Comps` VALUES (1,'Quad Tank',5,6,7,8,9,10,'When looking to secure a point quickly, the Quad Tank can be a good strategy. Because of its abnormality, most opposing teams would not expect four high health characters to rush the point. With two solid healers to back them up, a team of four tanks can easily push back even a decent team holding a point. Keep in mind this stat works best when the enemy team does not expect it.');
-INSERT INTO `Team_Comps` VALUES (2,'Death Ball',1,6,9,11,20,25,'It’s all the name. For teams looking to move quickly and swarm an enemy team, try the Death Ball strat. The secret sauce of this comp is made up of Lucio’s speed. Reinhardt’s shield, and a whole lot of hitscan DPS potential. If you have DPS teammates with great accuracy, roll out the death ball.');
+INSERT INTO `Team_Comps` VALUES (1,'Quad Tank',5,6,7,8,9,10,NULL,NULL,NULL,NULL,NULL,NULL,'When looking to secure a point quickly, the Quad Tank can be a good strategy. Because of its abnormality, most opposing teams would not expect four high health characters to rush the point. With two solid healers to back them up, a team of four tanks can easily push back even a decent team holding a point. Keep in mind this stat works best when the enemy team does not expect it.');
+INSERT INTO `Team_Comps` VALUES (2,'Death Ball',1,6,9,11,20,25,NULL,NULL,NULL,NULL,NULL,NULL,'It’s all the name. For teams looking to move quickly and swarm an enemy team, try the Death Ball strat. The secret sauce of this comp is made up of Lucio’s speed. Reinhardt’s shield, and a whole lot of hitscan DPS potential. If you have DPS teammates with great accuracy, roll out the death ball.');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
