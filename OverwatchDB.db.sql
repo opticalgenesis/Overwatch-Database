@@ -1042,25 +1042,6 @@ CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
 INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
 INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
-CREATE TABLE IF NOT EXISTS `Comps` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`info`	TEXT,
-	`name`	TEXT NOT NULL UNIQUE,
-	`hero_1`	INTEGER NOT NULL,
-	`hero_2`	INTEGER NOT NULL,
-	`hero_3`	INTEGER NOT NULL,
-	`hero_4`	INTEGER NOT NULL,
-	`hero_5`	INTEGER NOT NULL,
-	`hero_6`	INTEGER NOT NULL,
-	`alternative_1`	INTEGER,
-	`alternative_2`	INTEGER,
-	`alternative_3`	INTEGER,
-	`alternative_4`	INTEGER,
-	`alternative_5`	INTEGER,
-	`alternative_6`	INTEGER
-);
-INSERT INTO `Comps` VALUES (1,'GOATS comp includes 3 tanks and three healers.','GOATS',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `Comps` VALUES (2,'Dive includes high mobility heroes.','Dive',23,17,2,3,7,12,24,5,6,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
