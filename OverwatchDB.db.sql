@@ -92,6 +92,7 @@ INSERT INTO `Twitch_Streamers` VALUES (82,'WorstSombra','worstsombra',24,4,16,NU
 INSERT INTO `Twitch_Streamers` VALUES (83,'Cloneman16','cloneman16',9,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (84,'AnneDro','annedro',9,8,13,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (85,'BIGSUCC','slytradesman',21,NULL,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Tips` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
@@ -143,6 +144,8 @@ CREATE TABLE IF NOT EXISTS `Team_Comps` (
 INSERT INTO `Team_Comps` VALUES (1,'Goats (Standard)',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has a lot of sustain and is the best goats comp against poke/cleave damage like winston. Wins by out sustaining oposing comp and/or forcing the other team to point. Once the enemy is on the point your team focuses one target and kill the enemy one by one. Works better on first point hybrid maps and 2 cp maps. Countered by ana Goats or high damage ranged comps that have characters like junkrat or Pharah.');
 INSERT INTO `Team_Comps` VALUES (2,'Goats (Ana)',4,1,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more utility than standard Moira Goats with Ana''s sleep dart and nade. Ana Goats counters Moira Goats because of Ana''s nade. Try to use Ana''s nade offensively especially against Moira goats. If Ana hits multiple enemies with nade push in and take advantage of the anti-heal.  To get maximum value out of Ana''s nade try to hit your tanks and the enemy. Countered by Zen Goats and Ana is more vulnerable than Moira to dives and flankers like Tracer.');
 INSERT INTO `Team_Comps` VALUES (3,'Zoats (Zen Goats)',4,2,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more damage than both Moira Goats and Ana Goats but less healing. Play a slow shield war until Zen gets a discord on someone then everyone rushes and focuses that target.  Zen needs to stay alive and play more like a dps. Countered by cleave/poke since this comp doesnt have a lot of healing like Dive comps or Winston Goats.');
+INSERT INTO `Team_Comps` VALUES (4,'Float or Doats',12,7,8,2,4,6,1,NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `Team_Comps` VALUES (5,'Snoats (Mei Goats) ',7,9,15,2,4,6,12,8,1,5,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
