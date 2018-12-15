@@ -91,6 +91,7 @@ INSERT INTO `Twitch_Streamers` VALUES (81,'Joooomla25cm ','j0000mla25',28,NULL,N
 INSERT INTO `Twitch_Streamers` VALUES (82,'WorstSombra','worstsombra',24,4,16,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (83,'Cloneman16','cloneman16',9,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (84,'AnneDro','annedro',9,8,13,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (85,'BIGSUCC','slytradesman',21,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Tips` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
@@ -139,8 +140,9 @@ CREATE TABLE IF NOT EXISTS `Team_Comps` (
 	`alternative_6`	INTEGER,
 	`description`	TEXT
 );
-INSERT INTO `Team_Comps` VALUES (1,'Quad Tank',5,6,7,8,9,10,NULL,NULL,NULL,NULL,NULL,NULL,'When looking to secure a point quickly, the Quad Tank can be a good strategy. Because of its abnormality, most opposing teams would not expect four high health characters to rush the point. With two solid healers to back them up, a team of four tanks can easily push back even a decent team holding a point. Keep in mind this stat works best when the enemy team does not expect it.');
-INSERT INTO `Team_Comps` VALUES (2,'Death Ball',1,6,9,11,20,25,NULL,NULL,NULL,NULL,NULL,NULL,'It’s all the name. For teams looking to move quickly and swarm an enemy team, try the Death Ball strat. The secret sauce of this comp is made up of Lucio’s speed. Reinhardt’s shield, and a whole lot of hitscan DPS potential. If you have DPS teammates with great accuracy, roll out the death ball.');
+INSERT INTO `Team_Comps` VALUES (1,'Goats (Standard)',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has a lot of sustain and is the best goats comp against poke/cleave damage like winston. Wins by out sustaining oposing comp and/or forcing the other team to point. Once the enemy is on the point your team focuses one target and kill the enemy one by one. Works better on first point hybrid maps and 2 cp maps. Countered by ana Goats or high damage ranged comps that have characters like junkrat or Pharah.');
+INSERT INTO `Team_Comps` VALUES (2,'Goats (Ana)',4,1,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more utility than standard Moira Goats with Ana''s sleep dart and nade. Ana Goats counters Moira Goats because of Ana''s nade. Try to use Ana''s nade offensively especially against Moira goats. If Ana hits multiple enemies with nade push in and take advantage of the anti-heal.  To get maximum value out of Ana''s nade try to hit your tanks and the enemy. Countered by Zen Goats and Ana is more vulnerable than Moira to dives and flankers like Tracer.');
+INSERT INTO `Team_Comps` VALUES (3,'Zoats (Zen Goats)',4,2,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more damage than both Moira Goats and Ana Goats but less healing. Play a slow shield war until Zen gets a discord on someone then everyone rushes and focuses that target.  Zen needs to stay alive and play more like a dps. Countered by cleave/poke since this comp doesnt have a lot of healing like Dive comps or Winston Goats.');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
