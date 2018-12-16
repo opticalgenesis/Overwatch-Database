@@ -43,7 +43,7 @@ INSERT INTO `Twitch_Streamers` VALUES (32,'AimBotCalvin','aimbotcalvin',20,28,NU
 INSERT INTO `Twitch_Streamers` VALUES (33,'dhaK','dhaK',6,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (34,'Fareeha','fareeha',27,1,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (35,'Valkia','valkia',27,NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (36,'EvilToaster','eviltoaster',13,10,9,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (36,'EvilToaster','eviltoaster',10,13,9,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (37,'ShaDowBurn','sdburn',17,27,8,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (38,'Dibz','dibz',23,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (39,'KarQ','karq',1,2,NULL,NULL);
@@ -92,7 +92,7 @@ INSERT INTO `Twitch_Streamers` VALUES (82,'WorstSombra','worstsombra',24,4,16,NU
 INSERT INTO `Twitch_Streamers` VALUES (83,'Cloneman16','cloneman16',9,NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (84,'AnneDro','annedro',9,8,13,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (85,'BIGSUCC','slytradesman',21,NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,10,NULL);
 CREATE TABLE IF NOT EXISTS `Tips` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
