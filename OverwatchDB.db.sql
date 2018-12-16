@@ -752,7 +752,7 @@ INSERT INTO `Items` VALUES (311,'¡Asústame, Panteón!',24,5,1,NULL,NULL,NULL,N
 INSERT INTO `Items` VALUES (316,'De pelos.',24,5,1,NULL,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (321,'I think youre in over your head.',24,5,1,NULL,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (323,'Mess with the best and die like the rest.',24,5,1,NULL,NULL,NULL,NULL);
-INSERT INTO `Items` VALUES (331,'Wheres the fun in playing fair?',24,5,1,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (331,'Wheres the fun in playing fair?',24,5,1,NULL,NULL,NULL,0);
 INSERT INTO `Items` VALUES (332,'Boop!',24,5,1,NULL,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (334,'Did you mean to do that?',24,5,1,NULL,NULL,NULL,NULL);
 INSERT INTO `Items` VALUES (335,'Youre just a glitch in the system.',24,5,1,NULL,NULL,NULL,NULL);
@@ -774,9 +774,9 @@ INSERT INTO `Items` VALUES (357,'Lets not do that again.',24,5,1,4,2018,NULL,NUL
 INSERT INTO `Items` VALUES (358,'Justice delivered.',1,5,1,NULL,NULL,'',0);
 CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`Name`	TEXT UNIQUE,
-	`Price`	INTEGER,
-	`CreditForDuplicate`	INTEGER UNIQUE
+	`name`	TEXT UNIQUE,
+	`price`	INTEGER,
+	`credit_For_duplicate`	INTEGER UNIQUE
 );
 INSERT INTO `Item_Rarities` VALUES (1,'Common',25,5);
 INSERT INTO `Item_Rarities` VALUES (2,'Rare',75,15);
