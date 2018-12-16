@@ -62,7 +62,7 @@ INSERT INTO `Twitch_Streamers` VALUES (52,'Gale Adelade','gale_adelade',1,NULL,N
 INSERT INTO `Twitch_Streamers` VALUES (53,'Danteh','danteh',24,23,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (54,'Sinatraa','sinatraa',23,16,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (55,'Kafeeeeee','kafeeeeee_ow',NULL,NULL,NULL);
-INSERT INTO `Twitch_Streamers` VALUES (56,'Beeftipsy','beeftipsy',28,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (56,'Beeftipsy','beeftipsy',28,29,16);
 INSERT INTO `Twitch_Streamers` VALUES (57,'Scullybb','scullybb',3,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (58,'Soembie','soembie',NULL,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (62,'TwoMad','twomad',NULL,NULL,NULL);
@@ -865,7 +865,7 @@ INSERT INTO `Hero_Nationalities` VALUES (14,'Nigerian','Nigeria');
 INSERT INTO `Hero_Nationalities` VALUES (15,'British','United Kingdom');
 INSERT INTO `Hero_Nationalities` VALUES (16,'Irish','Ireland');
 INSERT INTO `Hero_Nationalities` VALUES (17,'Brazilian','Brazil');
-INSERT INTO `Hero_Nationalities` VALUES (18,'None','None');
+INSERT INTO `Hero_Nationalities` VALUES (18,'No Nationality','No Country');
 CREATE TABLE IF NOT EXISTS `Hero_Ability_Types` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
