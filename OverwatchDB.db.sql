@@ -403,34 +403,122 @@ CREATE TABLE IF NOT EXISTS `Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER UNIQUE,
 	`map_kind`	INTEGER,
-	`year`	INTEGER
+	`year`	INTEGER,
+	`official_description
+`	TEXT,
+	`background`	TEXT,
+	`gameplay`	TEXT,
+	`trivia`	TEXT
 );
-INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2,2016);
-INSERT INTO `Maps` VALUES (2,'Busan',1,2018);
-INSERT INTO `Maps` VALUES (3,'Junkertown',3,2017);
-INSERT INTO `Maps` VALUES (4,'Hollywood',4,2016);
-INSERT INTO `Maps` VALUES (5,'Oasis',1,2017);
-INSERT INTO `Maps` VALUES (6,'Dorado',3,2016);
-INSERT INTO `Maps` VALUES (7,'Route 66',3,2016);
-INSERT INTO `Maps` VALUES (8,'Hanamura',2,2016);
-INSERT INTO `Maps` VALUES (9,'Horizon Lunar Colony',2,2017);
-INSERT INTO `Maps` VALUES (10,'Volskaya Industries',2,2016);
-INSERT INTO `Maps` VALUES (11,'Ilios',1,2016);
-INSERT INTO `Maps` VALUES (12,'Numbani',4,2016);
-INSERT INTO `Maps` VALUES (13,'Château Guillard',5,2017);
-INSERT INTO `Maps` VALUES (14,'Nepal',1,2016);
-INSERT INTO `Maps` VALUES (15,'Lijang Tower',1,2016);
-INSERT INTO `Maps` VALUES (16,'Rialto',3,2018);
-INSERT INTO `Maps` VALUES (17,'Watchpoint: Gibraltar',3,2016);
-INSERT INTO `Maps` VALUES (18,'Blizzard World',4,2018);
-INSERT INTO `Maps` VALUES (19,'King''s Row',4,2016);
-INSERT INTO `Maps` VALUES (20,'Eichenwalde',4,2016);
-INSERT INTO `Maps` VALUES (21,'Black Forest',5,2017);
-INSERT INTO `Maps` VALUES (22,'Castillo',5,2017);
-INSERT INTO `Maps` VALUES (23,'Petra',5,2018);
-INSERT INTO `Maps` VALUES (24,'Necropolis',5,2017);
-INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5,2016);
-INSERT INTO `Maps` VALUES (26,'Ayutthaya',5,2018);
+INSERT INTO `Maps` VALUES (1,'Temple of Anubis',2,2016,'Nestled among the ancient ruins of the Giza Plateau on the outskirts of Cairo, the Temple of Anubis is one of many new excavations in the area. While most believe that the site is of interest for archaelogical reasons, it also hides the entrance to a research facility that extends deep beneath the earth. The facility is alleged to house an artificial intelligence, but the whole truth is known only to a select few. Not even the agents of Helix Security International who guard the facility know what they''re protecting.','',NULL,NULL);
+INSERT INTO `Maps` VALUES (2,'Busan',1,2018,'Busan City came under attack by the Gwishin omnics. MEKA successfully defeated them, but at the cost of all their mechs bar the one piloted by D.Va and some damage to the city itself. They attacked the city again one week later, in contrast to the usual gap of months. This left only D.Va to defend the city, but she managed to destroy the attackers.',NULL,NULL,NULL);
+INSERT INTO `Maps` VALUES (3,'Junkertown',3,2017,'Junkertown is an Escort map located in the harsh and unforgiving Australian Outback. Constructed from the remains of a destroyed omnium, it''s now the home to a band of lawless scavengers known as the Junkers, led by their cutthroat Queen. When they aren’t pillaging the omnium''s skeleton for anything of value, the Junkers blow off steam in the Scrapyard—a massive gladiatorial arena whose combatants fight for glory, riches...and to survive.','Junkertown is a dirty, dangerous, harsh, chaotic, grungy settlement located in the Australian Outback, constructed from the ruins of the Australian omnium. It is the home of the Junkers, and ruled by an individual called "the Queen". The entrance to the town is a fortified gate with a guard tower. The denizens of the town are taxed, and if they don''t pay up, the Queen sends her henchmen around to collect what''s due.
+
+Junkertown does have some amenities that one would expect from a proper town—repair shops, bars, tattoo shops, etc.',NULL,NULL);
+INSERT INTO `Maps` VALUES (4,'Hollywood',4,2016,'Welcome to the glitz and glamour of Hollywood, California, where palm trees and fancy cars line the streets, and movie stars, directors, and high-powered studio executives rub shoulders for a chat and a drink at Galand''s. Down the street from the Mandarin Theatre, Goldshire Studios'' omnic film auteur, HAL-Fred Glitchbot, has created his two latest films, They Come from Beyond the Moon and Six-Gun Killer, to varying amounts of critical and commercial acclaim. However, even Tinseltown has been gripped by anti-omnic sentiment, and the outspoken director has become a prime target in the escalating conflict.',NULL,NULL,NULL);
+INSERT INTO `Maps` VALUES (5,'Oasis',1,2017,'Oasis is one of the world''s most advanced cities, a shining jewel rising from the Arabian Desert. A monument to human ingenuity and invention, researchers and academics from around the region came together to found a city dedicated to scientific progress without restraints. The city and its inhabitants are governed by the Ministries, a collection of brilliant minds who possess many secrets that have attracted the interest of powerful organizations from around the world.','Oasis is set in the Arabian desert of Iraq. It was founded by a collective of eight leading scientists, led by Ibrahim Hassoun, Anya Al-Shahrani, Youssef al-Jabiri, and Mehmet Farhat. They were looking for a way to push the boundaries of what modern science at the time could do, albeit hindered by regulations, feeling that science in the modern world was progressing at too slow a pace. To that end they founded Oasis as a testament to the ingenuity of humanity. In their minds, what better way to do so than by turning a desolate landscape into one of the most technologically advanced and wondrous cities in the world, which could serve as a hub for unrestricted scientific endeavor. (The Ministry of Geology, led by Dr. Al-Shahrani, spearheaded the effort by developing cutting-edge technology that could sustain a thriving city in a desert environment.)
+
+As per its goal for advancing human knowledge, Oasis has one of the most highly educated populations on Earth, served by a state-of-the-art university and a database of all the world''s known existing printed material. It also ranks as one of the safest cities due to its usage of advanced predictive surveillance and crime modeling. Inhabitants also enjoy access to a wide range of world-class amenities, such as the verdant Abu Hassoun Gardens, temperature controlled streets, the luxurious Gilded Tower Hotel, and the elBuffi restaurant, considered the best dining establishment in the world. Perhaps the only cause for concern is the growing city''s heavy traffic, for which the Ministry of Transportation has issued a public advisory. One of Oasis'' most recognizable landmarks is an enigmatic tower that remains under construction for an indefinite period of time. Already the world''s tallest building, it is slated to become the tallest freestanding structure of any kind. It is believed that the project is part of the city''s ever-expanding computational and data collecting efforts.
+
+The Vishkar Corporation desires to have a presence in the city','Each turn is played on one of the three sections of the map:
+
+ - City Center
+ - Gardens
+ - University',NULL);
+INSERT INTO `Maps` VALUES (6,'Dorado',3,2016,'It is Festival de la Luz in Dorado, an annual celebration of the end of the Omnic Crisis and the period of darkness – both figurative and literal – that engulfed Mexico when the omnics destroyed much of the country’s power grid and infrastructure. But there is a new dawn, as LumériCo and its CEO, war hero and former president Guillermo Portero, are unveiling a string of fusion plants that promise to deliver clean, free energy to the Mexican people.
+
+The attacking team begins in Missión Dorado, a historic location famous for the sound of the ornamental bells that hang amidst its arches.','Dorado is a city in Mexico set high above a sweeping bay. The city is powered by gigantic ziggurats, which can be seen glowing around the bay. These were constructed by LumériCo, and as the final one was constructed, CEO Guillermo Portero gave a speech to mark the occasion. The city holds a festival that celebrates the end of the Omnic Crisis, though it possesses an underground criminal element.',NULL,NULL);
+INSERT INTO `Maps` VALUES (7,'Route 66',3,2016,NULL,'Though the travelers and road trippers who used to cross the US on historic Route 66 are gone, the Main Street of America still stands, a testament to a simpler time. The gas stations, roadside shops, and cafes have gone into disuse, and the fabled Deadlock Gorge is mostly seen from the comfort of transcontinental train cars. But amid the fading monuments of that earlier era, the outlaws of the Deadlock Gang are planning their biggest heist yet.',NULL,NULL);
+INSERT INTO `Maps` VALUES (8,'Hanamura',2,2016,'Hanamura is a well-preserved village of unassuming shops and quiet streets, known mostly for its idyllic cherry blossom festival every spring. But to those who know its history, Hanamura is the ancestral home of the Shimada ninja clan, which had grown over the centuries to become a powerful criminal organization. As its neighboring cities expanded, Hanamura was encircled, and eventually it was incorporated as a district within a larger city. For now, the imposing compound of the Shimada family lies empty, but that peace may soon be broken.','Hanamura is located in Japan, It is a suburban area that features temple grounds and Shimada Castle, which is quite large. With its restaurants, shops, and prime cherry blossom viewing, Hanamura is a popular tourist destination, but the sleepy town hides a dark secret known only to a select few.
+
+For generations the town was the home of the Shimada Clan, to which Hanzo and Genji used to belong.',NULL,NULL);
+INSERT INTO `Maps` VALUES (9,'Horizon Lunar Colony',2,2017,'Built as a first step towards humanity''s renewed exploration of space, the Horizon Lunar Colony’s goal was to examine the effects of prolonged extraterrestrial habitation—on human and ape alike. The scientists'' research proved incredibly promising...until, suddenly, all contact and communications with the base were lost.','The Horizon Lunar Colony (otherwise designated "Horizon One") is a moonbase constructed by Lucheng Interstellar, operated by its Lunar Ops branch. It was established as part of humanity''s renewed focus on space exploration. In addition to the scientists that worked there were a group of genetically enhanced gorillas that were intended to test the effects of prolonged habitation in space. Towards the colony''s last days, some of the gorillas had demonstrated adverse reactions to the genetic therapy, possibly compounded by life on the colony itself. A group of gorillas had established themselves as well-known troublemakers to the staff, and had put even some staff in the base''s infirmary. It was agreed that the gorillas should be confined to their quarters, but Dr. Harold Winston pointed out that not all of the gorillas had reacted adversely to the therapy. He didn''t know if shipping them to Earth would be a viable solution, if only for the medical issues that would present themselves. He advised putting a stop to the therapy.
+
+The experiments came to an end when the gorillas launched an uprising, killing the scientists and claiming the base for their own. It is known that in one of the last recorded messages, Dr Winston reported a malfunction at airlock E-35, and requested fellow staff members join him. It has further been implied that this was a ploy by the gorillas, who got the scientists in the airlock and then opened it, venting the humans onto the lunar surface to die from asphyxiation. For the gorillas themselves, it has been indicated that they are so far happy to stay within the base. Specimen 28 was one of the only exceptions, who built a rocket out of makeshift parts and successfully made it to Earth. Specimen 8 also escaped from the colony after engineering an escape pod and secretly attaching it to Specimen 28''s space shuttle.
+
+Years after the base''s fall, Lucheng Interstellar revealed in a press conference that the colony''s databases and monitoring systems were still up and running. While no direct communication was established with the facility, the company successfully retrieved interpersonnel logs sent days and moments before the base lost contact with Earth. It shared the transmissions with the press. It later released its first image of the colony''s still-operating integrated monitoring systems. A Lucheng spokesperson told Atlas News that the connection was unstable, but that the company was working around the clock to gather new information.',NULL,NULL);
+INSERT INTO `Maps` VALUES (10,'Volskaya Industries',2,2016,'Russia was one of the countries hit hardest by the Omnic Crisis, but during the rebuilding process, it rode the wave of the mechanized labor industry''s revitalization and entered a period of rapid growth. However, after recent attacks from the long-dormant Siberian omnium, Russia has returned to war footing, guarding its sparkling cities with the massive, human-piloted Svyatogor mechs developed and produced by Volskaya Industries.','Volskaya Industries is a Russian company involved in Svyatogor production, and is Russia''s premier anti-omnic security force. Katya Volskaya is its CEO. Based in St. Petersburg, its frigid mechworks are a hotbed for conflict and corporate backstabbing.
+
+In more recent times, in light of increased aggression from the Siberian omnium, the company increased production. Shortly after Guillermo Portero stepped down as CEO of LumériCo, Volskaya experienced a security breach in its network. This was at the hands of Sombra, who was able to shut down the company''s security systems as she, Widowmaker, and Reaper (all Talon operatives) conducted a raid on the company''s mech factory in order to assassinate Katya. Katya survived, but numerous personnel were killed and at least one mech was destroyed.',NULL,NULL);
+INSERT INTO `Maps` VALUES (11,'Ilios',1,2016,NULL,'Ilios is located in the Aegean sea of Greece, which is part of the Mediterranean Sea.
+
+Situated atop a small island rising from the Aegean Sea, Ilios is a postcard-perfect Mediterranean town, with a bustling harborside, winding paths for rambling hillside strolls, and gorgeous vistas. It is the ideal vacation stop for people looking for a place to relax, or for those interested in exploring the ruins scattered at the top of the island, where many artifacts and relics of the ancient world have been recently unearthed. The ruins were declared an internationally protected heritage site. However, Talon attempted to steal the artifacts.',NULL,NULL);
+INSERT INTO `Maps` VALUES (12,'Numbani',4,2016,'Known as the "City of Harmony," Numbani is one of the few places where omnics and humans live as equals. This collaboration has led to the creation of one of the world''s greatest and most technologically advanced cities in the short time since its establishment after the end of the Omnic Crisis. As part of this year''s Unity Day festivities celebrating the city''s founding, the gauntlet of the infamous Doomfist is being exhibited at the Numbani Heritage Museum.','One of the world''s most peaceful and foremost centers of scientific discovery and exploration, Numbani is a utopian city on the edge of the African savanna, somewhere near Nigeria. Called the City of Harmony, omnic-human equality is at the core of Numbani. It celebrates an event called "Unity Day".
+
+The city was established by Gabrielle Adawe as part of her peacemaking efforts after the end of the crisis. Omnics and humans built Numbani together, and their mutual cooperation is the driving force behind Numbani''s success.
+
+At some point after the Omnic Crisis, it was identified as an area with an active threat. It had to deal with raids by Akinjide Adeyemi, the second Doomfist, who earned the moniker of "Scourge of Numbani." Adeyemi was killed by his protoge, Akande Ogundimu, who not only took the Doomfist moniker and gauntlet as his own.
+
+Atlas News report on Numbani airport attack
+Years after Overwatch''s disbandment, this third Doomfist escaped from his cell. To defend itself against those that would see the omnic-human relationship harmed and to defend against Doomfist, the citizens of Numbani developed the OR15 defense robot. However, they were destroyed by Doomfist who attacked Numbani''s airport. As a result, flights in and out of Numbani were suspended. Doomfist''s gauntlet was also stolen, and the city was under threat by him again.',NULL,NULL);
+INSERT INTO `Maps` VALUES (13,'Château Guillard',5,2017,'Château Guillard is located near Annecy in southeastern France. For hundreds of years, it was the estate of the influential Guillard family, until it gradually fell into disrepair after the family’s power waned in the decades after the French Revolution. Recently, the château has found a new owner: the Talon agent Widowmaker, who has returned to her family’s ancestral home.',NULL,NULL,NULL);
+INSERT INTO `Maps` VALUES (14,'Nepal',1,2016,NULL,'Years ago, a group of omnic robots experienced what they described as a spiritual awakening. They abandoned their programmed lives to establish a monastery high in the Himalayas, where like-minded omnics could gather to meditate on the nature of their existence. Led by their spiritual leader, Tekhartha Mondatta, they took over the ruins of an ancient monastery and turned it into the home of the Shambali, a place where omnics and humans alike make pilgrimages in the hopes of finding a greater truth.',NULL,NULL);
+INSERT INTO `Maps` VALUES (15,'Lijang Tower',1,2016,NULL,'Lijiang Tower was built in the heart of a modern Chinese metropolis, its busy streets lined with stores, gardens, restaurants, and famous night markets, where foods from around the region are available at all hours. The tower itself is home to one of the leading companies in China''s state-of-the-art space industry, Lucheng Interstellar, an organization with a long pioneering history that is currently pushing the boundaries of space exploration.',NULL,NULL);
+INSERT INTO `Maps` VALUES (16,'Rialto',3,2018,'Rialto was home to Talon agent Antonio Bartalotti''s sprawling estate and the backdrop to the infamous “Venice Incident,” a turning point for Overwatch and Talon. The Italian government has taken great steps to preserve Venice, and the results are striking. Tourists visiting this picturesque town can sample the regional cuisine, enjoy a relaxing gondola ride, visit Galleria D’arte Omnica (the local art gallery), or simply take in the sights with a stroll along the canal.','Rialto is the central area of Venice, a place with several canals and rivers with gondolas and great historical heritage where humans and omnics live in harmony. However, despite the peaceful environment, Rialto is also home to Talon''s headquarters.',NULL,NULL);
+INSERT INTO `Maps` VALUES (17,'Watchpoint: Gibraltar',3,2016,'At its height, Overwatch maintained a number of bases around the world, each with its own purpose: peacekeeping, scientific research, or in the case of Watchpoint: Gibraltar, providing an orbital launch facility. The base was mothballed along with the rest of Overwatch''s installations, but there have been recent reports of activity within the perimeter. Could this indicate the presence of former Overwatch agents, or is this the work of organizations with more nefarious intentions?','Watchpoint: Gibraltar stands on the strategic point of the Rock of Gibraltar, and was an Overwatch outpost that stood guard over the Mediterranean. The base was shut down, but the base showed signs of activity in recent times. This was from Winston, who as part of his intent to reform Overwatch, intended to bring the group''s communication network back online. Constructing a satellite drone, he needed to get it to a rocket. The drone was successfully launched, and he looked on with pride.',NULL,NULL);
+INSERT INTO `Maps` VALUES (18,'Blizzard World',4,2018,'Epic fun detected: Welcome to Blizzard World.
+
+See your favorite gaming memories come to life in Overwatch’s new hybrid map as you attack and defend the payload across Azeroth, Tristram, the Koprulu Sector, and beyond!','“Where you took your first steps in Azeroth. Where you confronted the Lord of Terror himself. Where you spawned your first zergling rush. Sometimes, epic memories can only be made in an epic world. Your adventure. Your community. Your memories. See them come alive in your world. Blizzard World! Come and visit Blizzard World. New adventures are waiting for you."
+~ An ad for the theme park	
+
+The park was built in Irvine, California, and is themed around the worlds of Blizzard Entertainment.',NULL,NULL);
+INSERT INTO `Maps` VALUES (19,'King''s Row',4,2016,'King''s Row is an upscale, cosmopolitan neighborhood of London, England, but just beneath its peaceful surface, tensions between omnics and humans are running high. While much of modern Britain was built on the backs of omnic laborers, they have been denied the basic rights that humans have, with most omnics forced to live in the dense, claustrophobic city-beneath-the-city known by some as "the Underworld." Of greater concern is that recent demonstrations by pro-omnic-rights protestors have resulted in violent clashes with the police, and a solution is nowhere in sight.','A ritzy neighborhood, King''s Row is situated in the heart of London, and has cobblestone streets. It has its own police force. Omnics here are denied the same rights as humans. Nowhere else in the world are human-omnic tensions as high as in this neighborhood.
+
+Prior to the Omnic Crisis, King''s Row had its own omnic population. They built their own city beneath the surface. Omnic-human relations became tense in the city in the wake of protests, with the police clashing with omnics and their human sympathizers.
+
+Seven years before the present day, on the eve of a historic peace accord, the terrorist group Null Sector launched an uprising in King''s Row, causing London to go up in flames. Prior to this, the King''s Row Times had reported on growing unrest in London stemming from Null Sector''s activities. They took Mayor Nandah, Mondatta, and a hundred other prisoners captive in a guarded power plant. 27 days into the uprising, the British government forbade Overwatch from intervening, even while thousands in London needed medical aid. In truth, Blackwatch agent Jesse McCree was already on the ground, and had scouted the area. Despite the gag order, Commander Jack Morrison dispatched four Overwatch agents—Tracer, Mercy, Reinhardt, and Torbjörn—to put an end to the crisis.
+
+By the 28th day of the uprising, hundreds were dead, and thousands were injured. McCree reported the existence of Null Sector fortifications, and that they had complete tactical control. The team fought their way through the streets, even as hordes of Null Sector omnics tried to bar their way. The events that transpired were classified within Overwatch''s archives.
+
+King''s Row was ''visited'' by Junkrat and Roadhog in their global crime spree, causing damage in their wake.
+
+Omnic spiritual leader Tekhartha Mondatta did much to try to improve the conditions of omnics within King''s Row. At somepoint, he gave a speech to a joint human-omnic crowd. However, he was assassinated by Talon agent Widowmaker. In his memory, a large statue was built in his honor. Additionally, a memorial picture was placed on the stairs in front of The Meridian, where he gave his final speech.
+
+Currently, some people want to take out the omnics of King''s Row using an EMP device.',NULL,NULL);
+INSERT INTO `Maps` VALUES (20,'Eichenwalde',4,2016,NULL,'Eichenwalde is located in the middle of the Black Forest.
+
+The town was the site of one of the most famous battles during the Omnic Crisis. It was here that the leader of the Crusaders, Balderich von Adler, and a handful of his best soldiers, including his pupil, Reinhardt Wilhelm, made a last stand against an advancing automaton army. Since Eichenwalde was in the way of a larger omnic advance to Stuttgart, the town was evacuated on October 11, from 3 to 8 o''clock. Outnumbered and outgunned, almost all Crusaders were slain during the resulting combat, including the organizations leader. However, thanks to their valiant efforts, the German military was able to push back the omnic offensive and win the fight. In the present day, Eichenwalde lies abandoned, and the forest has slowly begun overtaking the village. However, the scars of war will never completely fade.',NULL,NULL);
+INSERT INTO `Maps` VALUES (21,'Black Forest',5,2017,NULL,'People used to believe that witches resided within the forest.
+
+The forest was a battlefield during the Omnic Crisis.
+
+Eichenwalde is located in the middle of the forest.',NULL,NULL);
+INSERT INTO `Maps` VALUES (22,'Castillo',5,2017,'Castillo is an old fort looking out over Dorado''s bay. It’s the location of Calaveras, a bar frequented by questionable patrons; a graffitied Los Muertos hangout; and Sombra''s hacking den.
+
+Test your skills against the enemy team throughout Castillo’s multiple levels, and use its winding stairs for cover and strategic advantage.',NULL,NULL,'The fort is possibly named in reference to Castillo Industries from StarCraft—both the fort and business were introduced to their respective universes in separate patches on the same date.');
+INSERT INTO `Maps` VALUES (23,'Petra',5,2018,NULL,'“Hazards beyond this point. Trespassers risk serious injury or elimination."
+~ Warning sign
+	
+Petra is a historical and archaeological city in southern Jordan. A group of archaeologists have begun an excavation and preservation project among the ruins of the city. The research team started with the uppermost levels of the temple, finding statues of Hera, Athena, and Aphrodite. While preparing for excavation of the lower chambers, early imaging revealed a hidden chamber.
+
+The organization carrying out the excavations is also carrying out operations in Ilios and Thailand.','The map''s environment range from high vistas to twisting passageways and deep caverns. A dilapidated bridge stretches across the map, and the ground underneath it can crumble away to reveal a lethal pit. Hopping on a green jump pad will boost a hero up to Petra’s higher levels and unlock new strategic possibilities.',NULL);
+INSERT INTO `Maps` VALUES (24,'Necropolis',5,2017,'Ana Amari has made Necropolis her personal hideout—and an impromptu field base where she can keep an eye on things.
+
+Head to Ana’s preferred vantage point at the top of the ruins, and use the high ground (and the element of surprise) against the enemy team. Or walk the stone corridors below, and take the fight to them directly—just watch out for pits!',NULL,NULL,NULL);
+INSERT INTO `Maps` VALUES (25,'Ecopoint: Antractica',5,2016,NULL,'Maintained by Overwatch, the ecopoint served as a monitoring station for the study of Earth''s changing climate.
+
+Disaster struck the station when it was hit by a polar storm, damaging the station''s solar array. Cut off from the outside world, the scientists were left stranded in the damaged facility. As their supplies dwindled, they entered cryostasis in a last-ditch effort to survive until a rescue attempt could be made.
+
+Rescue came years later, but Dr. Mei-Ling Zhou was the only survivor. By this point, Overwatch was no more, and the eco-watchpoints had ceased to operate. Mei left the base after receiving a recall order from Winston.',NULL,NULL);
+INSERT INTO `Maps` VALUES (26,'Ayutthaya',5,2018,NULL,NULL,'The map is divided into two halves. On one side is an ancient temple, on the other is a more modern environment similar to a hotel lobby. Both identical halves cross in a central courtyard marked by an elephant statue.
+
+Unlike previous Capture the Flag maps, the game will not end in a draw if no clear winner is declared when the match time expires. Instead, the game will enter Sudden Death mode, and both teams'' flags will be shifted closer to the courtyard. The team to capture the enemy flag first wins.
+
+As an update to this mode, many characters will drop the flag if a movement-boosting ability is used while they hold the flag, or become unable to grab the flag while said ability is active. This includes:
+
+Doomfist: Any ability besides Hand Cannon
+D.Va: Boosters
+Genji: Swift Strike
+Lúcio: Wall Ride, Amp it Up during speed boost
+Pharah: Jump Jet (but not Hover Jets)
+Brigitte: Rally and Shield Bash
+Reinhardt: Charge
+Winston: Primal Rage
+Junkrat: Concussion Mine
+Soldier: 76: Sprint
+Tracer: Blink
+Widowmaker: Grappling Hook
+Sombra: Stealth and Translocator',NULL);
 CREATE TABLE IF NOT EXISTS `Map_kinds` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
