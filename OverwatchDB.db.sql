@@ -404,8 +404,7 @@ CREATE TABLE IF NOT EXISTS `Maps` (
 	`name`	INTEGER UNIQUE,
 	`map_kind`	INTEGER,
 	`year`	INTEGER,
-	`official_description
-`	TEXT,
+	`official_description`	TEXT,
 	`background`	TEXT,
 	`gameplay`	TEXT,
 	`trivia`	TEXT
