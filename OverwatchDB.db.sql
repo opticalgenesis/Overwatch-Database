@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
 );
 INSERT INTO `Twitch_Streamers` VALUES (1,'Stevoo','just_stevo',21,4,14);
 INSERT INTO `Twitch_Streamers` VALUES (2,'FitzyHere','fitzyhere',24,15,1);
-INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,4,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (3,'Fuey500','fuey500',22,'',NULL);
 INSERT INTO `Twitch_Streamers` VALUES (4,'Dafran','dafran',23,25,28);
 INSERT INTO `Twitch_Streamers` VALUES (5,'SPREE','spree',8,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (6,'xQc','xqcow',12,9,NULL);
@@ -89,6 +89,8 @@ INSERT INTO `Twitch_Streamers` VALUES (83,'Cloneman16','cloneman16',9,NULL,NULL)
 INSERT INTO `Twitch_Streamers` VALUES (84,'AnneDro','annedro',9,8,13);
 INSERT INTO `Twitch_Streamers` VALUES (85,'BIGSUCC','slytradesman',21,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,10);
+INSERT INTO `Twitch_Streamers` VALUES (87,'Crosyph','crosyph',29,28,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (88,'Brandito','brandito',16,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Tips` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
