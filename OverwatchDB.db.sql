@@ -1156,7 +1156,7 @@ CREATE TABLE IF NOT EXISTS `Events` (
 INSERT INTO `Events` VALUES (1,'Winter Wonderland','winter-wonderland');
 INSERT INTO `Events` VALUES (2,'Halloween Terror','halloween-terror');
 INSERT INTO `Events` VALUES (3,'Summer Games','summer-games');
-INSERT INTO `Events` VALUES (4,'Aniversary','anniversary');
+INSERT INTO `Events` VALUES (4,'Anniversary','anniversary');
 INSERT INTO `Events` VALUES (5,'Lunar New Year','lunar-new-year');
 INSERT INTO `Events` VALUES (6,'Archives','archives');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
