@@ -139,11 +139,11 @@ CREATE TABLE IF NOT EXISTS `Team_Comps` (
 	`alternative_6`	INTEGER,
 	`description`	TEXT
 );
-INSERT INTO `Team_Comps` VALUES (1,'Goats (Standard)',4,5,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has a lot of sustain and is the best goats comp against poke/cleave damage like winston. Wins by out sustaining oposing comp and/or forcing the other team to point. Once the enemy is on the point your team focuses one target and kill the enemy one by one. Works better on first point hybrid maps and 2 cp maps. Countered by ana Goats or high damage ranged comps that have characters like junkrat or Pharah.');
-INSERT INTO `Team_Comps` VALUES (2,'Goats (Ana)',4,1,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more utility than standard Moira Goats with Ana''s sleep dart and nade. Ana Goats counters Moira Goats because of Ana''s nade. Try to use Ana''s nade offensively especially against Moira goats. If Ana hits multiple enemies with nade push in and take advantage of the anti-heal.  To get maximum value out of Ana''s nade try to hit your tanks and the enemy. Countered by Zen Goats and Ana is more vulnerable than Moira to dives and flankers like Tracer.');
-INSERT INTO `Team_Comps` VALUES (3,'Zoats (Zen Goats)',4,2,6,7,8,9,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more damage than both Moira Goats and Ana Goats but less healing. Play a slow shield war until Zen gets a discord on someone then everyone rushes and focuses that target.  Zen needs to stay alive and play more like a dps. Countered by cleave/poke since this comp doesnt have a lot of healing like Dive comps or Winston Goats.');
-INSERT INTO `Team_Comps` VALUES (4,'Float or Doats',12,7,8,2,4,6,1,NULL,NULL,NULL,NULL,NULL,NULL);
-INSERT INTO `Team_Comps` VALUES (5,'Snoats (Mei Goats) ',7,9,15,2,4,6,12,8,1,5,NULL,NULL,NULL);
+INSERT INTO `Team_Comps` VALUES (1,'Goats (Standard)',9,7,8,4,5,6,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has a lot of sustain and is the best goats comp against poke/cleave damage like winston. Wins by out sustaining opposing comp and/or forcing the other team to point. Once the enemy is on the point your team focuses one target and kill the enemy one by one. Works better on first point hybrid maps and 2 cp maps. Countered by ana Goats or high damage ranged comps that have characters like junkrat or Pharah.');
+INSERT INTO `Team_Comps` VALUES (2,'Ana Goats',9,7,8,4,6,1,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more utility than standard Moira Goats with Ana''s sleep dart and nade. Ana Goats counters Moira Goats because of Ana''s nade. Try to use Ana''s nade offensively especially against Moira goats. If Ana hits multiple enemies with nade push in and take advantage of the anti-heal. To get maximum value out of Ana''s nade try to hit your tanks and the enemy. Countered by Zen Goats and Ana is more vulnerable than Moira to dives and flankers like Tracer. Ana’s in this comp tend to play closer to tanks but further back than a Moira.');
+INSERT INTO `Team_Comps` VALUES (3,'Zoats (Zen Goats)',9,7,8,4,6,2,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more damage than both Moira Goats and Ana Goats but less healing. Play a slow until Zen gets a discord on someone or if the enemy wastes abilities, like Zarya’s ally bubble in a Goats (any kind of Goats) vs Zoats, then everyone rushes and focuses that target.  Zen needs to stay alive and play more like a dps. Countered by cleave/poke since this comp doesn''t have a lot of healing like Dive comps or Winston Goats.');
+INSERT INTO `Team_Comps` VALUES (4,'Floats or Doats',12,7,8,4,6,2,1,NULL,NULL,NULL,NULL,NULL,'This comp is more mobile than a goats comp with a rein. Play on maps with more high ground that your Winston can take advantage of or if you need the mobility to survive. With Winston instead of rein the main tank has more survivability and cleave damage which is effective against low healing comps like Zoats. A change that can be made in this roster is changing the Zen for an Ana. Ana gives this comp more healing and utility especially to keep your main tank alive.');
+INSERT INTO `Team_Comps` VALUES (5,'Snoats (Mei Goats)',9,8,15,4,6,2,7,1,5,NULL,NULL,NULL,'This comp Is good for brawling especially in close spaces where you can use Mei''s wall to seperate the enemy players. Target whoever the Mei is freezing and use choke point to your teams advantage.  Better on defense or when the enemy needs to push into your team or in narrow maps. You can switch out heroes for individual proficiencies and maps.  Possible swaps include swapping Zarya for a Dva and Zen, Ana, and Moira are interchangeable depending on what map you are playing on and what you need. If you need the extra damage play zen but if you are playing in a close room and need more healing play Moira.');
 CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
@@ -1183,6 +1183,11 @@ CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
 INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
 INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
+CREATE TABLE IF NOT EXISTS `Current_Event` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT
+);
+INSERT INTO `Current_Event` VALUES (1,'Winter Wonderland');
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
