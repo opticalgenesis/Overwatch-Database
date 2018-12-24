@@ -861,6 +861,26 @@ INSERT INTO `Items` VALUES (355,'Were you done talking?',24,5,1,4,2017,NULL,NULL
 INSERT INTO `Items` VALUES (356,'I need a drink.',24,5,1,4,2017,NULL,NULL);
 INSERT INTO `Items` VALUES (357,'Lets not do that again.',24,5,1,4,2018,NULL,NULL);
 INSERT INTO `Items` VALUES (358,'Justice delivered.',1,5,1,NULL,NULL,'',0);
+INSERT INTO `Items` VALUES (359,'Classic',14,1,1,NULL,NULL,NULL,0);
+INSERT INTO `Items` VALUES (360,'Demon Hunter',24,1,4,7,2018,NULL,'BlizzCon 2018 virtual ticket in-game item.');
+INSERT INTO `Items` VALUES (361,'Dawn',14,1,2,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (362,'Meadow',14,1,2,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (363,'Sky',14,1,2,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (364,'Soot',14,1,2,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (365,'Defense Matrix',14,1,3,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (366,'Omnic Crisis',14,1,3,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (367,'Rooster',14,1,3,5,9999,NULL,NULL);
+INSERT INTO `Items` VALUES (368,'Null Sector',14,1,3,6,9999,NULL,NULL);
+INSERT INTO `Items` VALUES (369,'BlizzCon 2016',14,1,3,7,2016,NULL,'BlizzCon 2016 virtual ticket in-game item.');
+INSERT INTO `Items` VALUES (370,'Tombstone',14,1,3,2,9999,NULL,NULL);
+INSERT INTO `Items` VALUES (371,'Antique',14,1,4,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (372,'Woodbot',14,1,4,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (373,'Gearbot',14,1,4,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (374,'Steambot',14,1,4,NULL,NULL,NULL,NULL);
+INSERT INTO `Items` VALUES (375,'Avalanche',14,1,4,1,2017,NULL,NULL);
+INSERT INTO `Items` VALUES (376,'Overgrown',14,1,4,NULL,NULL,NULL,'Exclusive to Overwatch Origins Edition, Game of the Year Edition & Legendary Edition.');
+INSERT INTO `Items` VALUES (377,'Dune Buggy',14,1,4,4,2017,NULL,NULL);
+INSERT INTO `Items` VALUES (378,'Stealth',14,1,4,4,2018,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Item_Rarities` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
@@ -1155,15 +1175,15 @@ INSERT INTO `Hero_Abilities` VALUES (156,25,'Biotic Field',3,'Soldier: 76 plants
 INSERT INTO `Hero_Abilities` VALUES (157,25,'Tactical Visor',5,'Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.','Reload time: 0.75 seconds.','Casting time: 1.4 seconds.','Duration: 6 seconds.','Tactical Visor only targets enemy heroes themselves, thus it cannot target enemy objects such as Torbjorn''s Turret, Junkrat''s Riptire, Symmetra''s Sentry Turrets, and Wrecking Ball''s Minefield.','Soldier: 76 is not capable of dealing headshots while Tactical Visor is active.',NULL,NULL,NULL,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Events` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT UNIQUE,
-	`link`	TEXT
+	`name`	TEXT UNIQUE
 );
-INSERT INTO `Events` VALUES (1,'Winter Wonderland','winter-wonderland');
-INSERT INTO `Events` VALUES (2,'Halloween Terror','halloween-terror');
-INSERT INTO `Events` VALUES (3,'Summer Games','summer-games');
-INSERT INTO `Events` VALUES (4,'Anniversary','anniversary');
-INSERT INTO `Events` VALUES (5,'Lunar New Year','lunar-new-year');
-INSERT INTO `Events` VALUES (6,'Archives','archives');
+INSERT INTO `Events` VALUES (1,'Winter Wonderland');
+INSERT INTO `Events` VALUES (2,'Halloween Terror');
+INSERT INTO `Events` VALUES (3,'Summer Games');
+INSERT INTO `Events` VALUES (4,'Anniversary');
+INSERT INTO `Events` VALUES (5,'Lunar New Year');
+INSERT INTO `Events` VALUES (6,'Archives');
+INSERT INTO `Events` VALUES (7,'BlizzCon');
 CREATE TABLE IF NOT EXISTS `Cut_Maps` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -1190,9 +1210,10 @@ INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
 CREATE TABLE IF NOT EXISTS `Current_Event` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT
+	`name`	TEXT,
+	`event_id`	INTEGER
 );
-INSERT INTO `Current_Event` VALUES (1,'Winter Wonderland');
+INSERT INTO `Current_Event` VALUES (1,'Winter Wonderland',1);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
