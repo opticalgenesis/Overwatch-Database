@@ -1208,12 +1208,6 @@ CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
 INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
 INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
-CREATE TABLE IF NOT EXISTS `Current_Event` (
-	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	`name`	TEXT,
-	`event_id`	INTEGER
-);
-INSERT INTO `Current_Event` VALUES (1,'Winter Wonderland',1);
 CREATE TABLE IF NOT EXISTS `Cinematics` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
@@ -1234,4 +1228,10 @@ INSERT INTO `Cinematics` VALUES (7,'Dragons','youtu.be/oJ09xdxzIJQ',2016,18,17,N
 INSERT INTO `Cinematics` VALUES (8,'Alive','youtu.be/U130wnpi-C0',2016,28,23,NULL,NULL);
 INSERT INTO `Cinematics` VALUES (9,'Recall','youtu.be/sB5zlHMsM7k',2016,12,NULL,NULL,NULL);
 INSERT INTO `Cinematics` VALUES (10,'Reunion','youtu.be/PKYVvPNhRR0',2018,20,29,NULL,NULL);
+CREATE TABLE IF NOT EXISTS `Active_Event` (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	TEXT,
+	`event_id`	INTEGER
+);
+INSERT INTO `Active_Event` VALUES (1,'Winter Wonderland',1);
 COMMIT;
