@@ -91,6 +91,7 @@ INSERT INTO `Twitch_Streamers` VALUES (85,'BIGSUCC','slytradesman',21,NULL,NULL)
 INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,10);
 INSERT INTO `Twitch_Streamers` VALUES (87,'Crosyph','crosyph',29,28,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (88,'Brandito','brandito',16,NULL,NULL);
+INSERT INTO `Twitch_Streamers` VALUES (89,'Raihan','raihanow',21,NULL,NULL);
 CREATE TABLE IF NOT EXISTS `Tips` (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
@@ -1233,5 +1234,4 @@ CREATE TABLE IF NOT EXISTS `Active_Event` (
 	`name`	TEXT,
 	`event_id`	INTEGER
 );
-INSERT INTO `Active_Event` VALUES (1,'Winter Wonderland',1);
 COMMIT;
