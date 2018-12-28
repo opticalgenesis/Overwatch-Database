@@ -1,5 +1,5 @@
 BEGIN TRANSACTION;
-CREATE TABLE IF NOT EXISTS `Twitch_Streamers` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Twitch_Streamers` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
 	`twitch_username`	TEXT NOT NULL UNIQUE,
@@ -92,7 +92,7 @@ INSERT INTO `Twitch_Streamers` VALUES (86,'Fullcater','fullcater',9,12,10);
 INSERT INTO `Twitch_Streamers` VALUES (87,'Crosyph','crosyph',29,28,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (88,'Brandito','brandito',16,NULL,NULL);
 INSERT INTO `Twitch_Streamers` VALUES (89,'Raihan','raihanow',21,NULL,NULL);
-CREATE TABLE IF NOT EXISTS `Tips` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Tips` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER NOT NULL,
 	`desc`	TEXT NOT NULL UNIQUE
@@ -123,7 +123,7 @@ INSERT INTO `Tips` VALUES (23,24,'The Translocator is a visible object to enemie
 INSERT INTO `Tips` VALUES (24,24,'Have your Translocator ready when moving to use EMP; its AoE nature requires Sombra to try and stand within the center of the enemy team, which is extremely dangerous and will require you to teleport out almost immediately. Coordination is key to ensure that your teammates are in position and have their abilities ready to follow-up on your EMP, lest you waste it and only inconvenience the enemy team for the 6 seconds they are hacked.');
 INSERT INTO `Tips` VALUES (25,24,'While Sombra can inflict a significant amount of damage with good aim and positioning, she is highly reliant on her teammates to capitalize on her abilities during team fights. Communicating with your teammates on enemies with low HP, your intended hack target, and when you are going to use EMP is necessary to realize her full potential during team play.
 ');
-CREATE TABLE IF NOT EXISTS `Team_Comps` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Team_Comps` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL,
 	`map`	TEXT,
@@ -147,7 +147,7 @@ INSERT INTO `Team_Comps` VALUES (2,'Ana Goats','Kings Row',NULL,9,7,8,4,6,1,NULL
 INSERT INTO `Team_Comps` VALUES (3,'Zoats (Zen Goats)','Busan Meka Base',NULL,9,7,8,4,6,2,NULL,NULL,NULL,NULL,NULL,NULL,'This comp has more damage than both Moira Goats and Ana Goats but less healing. Play a slow until Zen gets a discord on someone or if the enemy wastes abilities, like Zarya’s ally bubble in a Goats (any kind of Goats) vs Zoats, then everyone rushes and focuses that target.  Zen needs to stay alive and play more like a dps. Countered by cleave/poke since this comp doesn''t have a lot of healing like Dive comps or Winston Goats.');
 INSERT INTO `Team_Comps` VALUES (4,'Floats or Doats','Hollywood',NULL,12,7,8,4,6,2,1,NULL,NULL,NULL,NULL,NULL,'This comp is more mobile than a goats comp with a rein. Play on maps with more high ground that your Winston can take advantage of or if you need the mobility to survive. With Winston instead of rein the main tank has more survivability and cleave damage which is effective against low healing comps like Zoats. A change that can be made in this roster is changing the Zen for an Ana. Ana gives this comp more healing and utility especially to keep your main tank alive.');
 INSERT INTO `Team_Comps` VALUES (5,'Snoats (Mei Goats)','Nepal Village',NULL,9,8,15,4,6,2,7,1,5,NULL,NULL,NULL,'This comp Is good for brawling especially in close spaces where you can use Mei''s wall to seperate the enemy players. Target whoever the Mei is freezing and use choke point to your teams advantage.  Better on defense or when the enemy needs to push into your team or in narrow maps. You can switch out heroes for individual proficiencies and maps.  Possible swaps include swapping Zarya for a Dva and Zen, Ana, and Moira are interchangeable depending on what map you are playing on and what you need. If you need the extra damage play zen but if you are playing in a close room and need more healing play Moira.');
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Teams` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Teams` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`city`	TEXT NOT NULL,
 	`name`	TEXT NOT NULL UNIQUE,
@@ -177,7 +177,7 @@ INSERT INTO `Overwatch_League_Teams` VALUES (17,'15','Eternal','6',2,'2F3D57','8
 INSERT INTO `Overwatch_League_Teams` VALUES (18,'18','Spark','4',1,'FA7298','5887CF','FFFFFF');
 INSERT INTO `Overwatch_League_Teams` VALUES (19,'17','Charge','4',1,'122D42','67A2B2','25F2D4');
 INSERT INTO `Overwatch_League_Teams` VALUES (20,'19','Titans','5',1,'0A226C','2FB228','FEFEFE');
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Players` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Players` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nickname`	TEXT NOT NULL UNIQUE,
 	`owl_team`	INTEGER,
@@ -346,7 +346,7 @@ INSERT INTO `Overwatch_League_Players` VALUES (157,'Hyeonu',15,'Hyeon Woo Jo',1)
 INSERT INTO `Overwatch_League_Players` VALUES (158,'Stratus',15,'Ethan Yankel',4);
 INSERT INTO `Overwatch_League_Players` VALUES (159,'Ado',15,'Gi Hyeon Chon',2);
 INSERT INTO `Overwatch_League_Players` VALUES (160,'gido',15,'Gido Moon',4);
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Items` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Items` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT,
 	`hero`	INTEGER NOT NULL,
@@ -359,19 +359,19 @@ CREATE TABLE IF NOT EXISTS `Overwatch_League_Items` (
 INSERT INTO `Overwatch_League_Items` VALUES (1,'Dance Party',6,4,'',2018,200,NULL);
 INSERT INTO `Overwatch_League_Items` VALUES (2,'Pacific',17,1,2,2018,200,NULL);
 INSERT INTO `Overwatch_League_Items` VALUES (3,'Atlantic',23,1,2,2018,200,NULL);
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Events` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Events` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
 INSERT INTO `Overwatch_League_Events` VALUES (1,'Overwatch League All-Access Pass');
 INSERT INTO `Overwatch_League_Events` VALUES (2,'Overwatch League All-Star Weekend');
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Divisions` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Divisions` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
 INSERT INTO `Overwatch_League_Divisions` VALUES (1,'Pacific');
 INSERT INTO `Overwatch_League_Divisions` VALUES (2,'Atlantic');
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Countries` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Countries` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -381,7 +381,7 @@ INSERT INTO `Overwatch_League_Countries` VALUES (3,'England');
 INSERT INTO `Overwatch_League_Countries` VALUES (4,'China');
 INSERT INTO `Overwatch_League_Countries` VALUES (5,'Canada');
 INSERT INTO `Overwatch_League_Countries` VALUES (6,'France');
-CREATE TABLE IF NOT EXISTS `Overwatch_League_Cities` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Overwatch_League_Cities` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -404,7 +404,7 @@ INSERT INTO `Overwatch_League_Cities` VALUES (16,'Chengdu');
 INSERT INTO `Overwatch_League_Cities` VALUES (17,'Guangzhou');
 INSERT INTO `Overwatch_League_Cities` VALUES (18,'Hangzhou');
 INSERT INTO `Overwatch_League_Cities` VALUES (19,'Vancouver');
-CREATE TABLE IF NOT EXISTS `Maps` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Maps` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER UNIQUE,
 	`map_kind`	INTEGER,
@@ -523,7 +523,7 @@ Soldier: 76: Sprint
 Tracer: Blink
 Widowmaker: Grappling Hook
 Sombra: Stealth and Translocator',NULL);
-CREATE TABLE IF NOT EXISTS `Map_kinds` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Map_kinds` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -532,7 +532,7 @@ INSERT INTO `Map_kinds` VALUES (2,'Assault');
 INSERT INTO `Map_kinds` VALUES (3,'Escort');
 INSERT INTO `Map_kinds` VALUES (4,'Hybrid');
 INSERT INTO `Map_kinds` VALUES (5,'Arcade');
-CREATE TABLE IF NOT EXISTS `Items` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Items` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL,
 	`hero`	INTEGER NOT NULL,
@@ -884,7 +884,7 @@ INSERT INTO `Items` VALUES (375,'Avalanche',14,1,4,1,2017,NULL,NULL);
 INSERT INTO `Items` VALUES (376,'Overgrown',14,1,4,NULL,NULL,NULL,'Exclusive to Overwatch Origins Edition, Game of the Year Edition & Legendary Edition.');
 INSERT INTO `Items` VALUES (377,'Dune Buggy',14,1,4,4,2017,NULL,NULL);
 INSERT INTO `Items` VALUES (378,'Stealth',14,1,4,4,2018,NULL,NULL);
-CREATE TABLE IF NOT EXISTS `Item_Rarities` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Item_Rarities` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE,
 	`price`	INTEGER,
@@ -894,7 +894,7 @@ INSERT INTO `Item_Rarities` VALUES (1,'Common',25,5);
 INSERT INTO `Item_Rarities` VALUES (2,'Rare',75,15);
 INSERT INTO `Item_Rarities` VALUES (3,'Epic',250,50);
 INSERT INTO `Item_Rarities` VALUES (4,'Legendary',1000,200);
-CREATE TABLE IF NOT EXISTS `Item_Kinds` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Item_Kinds` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -905,7 +905,7 @@ INSERT INTO `Item_Kinds` VALUES (4,'Emote');
 INSERT INTO `Item_Kinds` VALUES (5,'Voice Line');
 INSERT INTO `Item_Kinds` VALUES (6,'Spray');
 INSERT INTO `Item_Kinds` VALUES (7,'Player Icon');
-CREATE TABLE IF NOT EXISTS `Heroes` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Heroes` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
 	`role`	INTEGER NOT NULL,
@@ -947,12 +947,12 @@ INSERT INTO `Heroes` VALUES (26,'Reaper',2,250,0,0,1,'Gabriel Reyes',58,1,'Death
 INSERT INTO `Heroes` VALUES (27,'Pharah',2,200,0,0,1,'Fareeha Amari',32,7,'I will protect the innocent.');
 INSERT INTO `Heroes` VALUES (28,'Widowmaker',2,200,0,0,2,'Amélie Lacroix (née Guillard)',33,9,'One shot, one kill.');
 INSERT INTO `Heroes` VALUES (29,'Ashe',2,200,0,0,2,'Elizabeth Caledonia “Calamity” Ashe',39,1,'My business, my rules.');
-CREATE TABLE IF NOT EXISTS `Hero_Sub_Roles` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Hero_Sub_Roles` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
 INSERT INTO `Hero_Sub_Roles` VALUES (1,'Sniper');
-CREATE TABLE IF NOT EXISTS `Hero_Roles` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Hero_Roles` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -960,7 +960,7 @@ INSERT INTO `Hero_Roles` VALUES (1,'Support');
 INSERT INTO `Hero_Roles` VALUES (2,'Damage');
 INSERT INTO `Hero_Roles` VALUES (3,'Tank');
 INSERT INTO `Hero_Roles` VALUES (4,'Flex');
-CREATE TABLE IF NOT EXISTS `Hero_Nationalities` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Hero_Nationalities` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`nationality`	TEXT NOT NULL UNIQUE,
 	`country`	TEXT NOT NULL UNIQUE
@@ -983,7 +983,7 @@ INSERT INTO `Hero_Nationalities` VALUES (15,'British','United Kingdom');
 INSERT INTO `Hero_Nationalities` VALUES (16,'Irish','Ireland');
 INSERT INTO `Hero_Nationalities` VALUES (17,'Brazilian','Brazil');
 INSERT INTO `Hero_Nationalities` VALUES (18,'No Nationality','No Country');
-CREATE TABLE IF NOT EXISTS `Hero_Ability_Types` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Hero_Ability_Types` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE
 );
@@ -993,7 +993,7 @@ INSERT INTO `Hero_Ability_Types` VALUES (3,'Ability');
 INSERT INTO `Hero_Ability_Types` VALUES (4,'Passive ability');
 INSERT INTO `Hero_Ability_Types` VALUES (5,'Ultimate ability');
 INSERT INTO `Hero_Ability_Types` VALUES (6,'Weapon (Scope)');
-CREATE TABLE IF NOT EXISTS `Hero_Abilities` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Hero_Abilities` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`hero`	INTEGER,
 	`name`	TEXT,
@@ -1176,7 +1176,7 @@ INSERT INTO `Hero_Abilities` VALUES (154,25,'Helix Rockets',3,'Tiny rockets spir
 INSERT INTO `Hero_Abilities` VALUES (155,25,'Sprint',3,'Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.','Move. speed: 8.33 meters per second.','Casting time: 0.5 seconds (recovery).','Duration: Until cancelled.','Soldier: 76 can deploy the Biotic Field without waiting for the recovery animation.','The activation of the ability can be customized between holding the button and toggling with a single press.',NULL,NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (156,25,'Biotic Field',3,'Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.','Healing: 40.8 health per second, 204 health over entire duration.','Area of effect: 5 meters.','Duration: 5 seconds.','Cooldown: 15 seconds.','The field cannot be destroyed by enemies.','Use of multiple fields doesn''t stack.',NULL,NULL,NULL,NULL);
 INSERT INTO `Hero_Abilities` VALUES (157,25,'Tactical Visor',5,'Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.','Reload time: 0.75 seconds.','Casting time: 1.4 seconds.','Duration: 6 seconds.','Tactical Visor only targets enemy heroes themselves, thus it cannot target enemy objects such as Torbjorn''s Turret, Junkrat''s Riptire, Symmetra''s Sentry Turrets, and Wrecking Ball''s Minefield.','Soldier: 76 is not capable of dealing headshots while Tactical Visor is active.',NULL,NULL,NULL,NULL,NULL);
-CREATE TABLE IF NOT EXISTS `Events` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Events` USING fts4 ( 
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT UNIQUE
 );
@@ -1187,7 +1187,7 @@ INSERT INTO `Events` VALUES (4,'Anniversary');
 INSERT INTO `Events` VALUES (5,'Lunar New Year');
 INSERT INTO `Events` VALUES (6,'Archives');
 INSERT INTO `Events` VALUES (7,'BlizzCon');
-CREATE TABLE IF NOT EXISTS `Cut_Maps` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Cut_Maps` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT NOT NULL UNIQUE,
 	`kind`	INTEGER,
@@ -1204,14 +1204,14 @@ INSERT INTO `Cut_Maps` VALUES (8,'London',1,'overwatch.gamepedia.com/London');
 INSERT INTO `Cut_Maps` VALUES (9,'San Joaquin',1,'overwatch.gamepedia.com/San_Joaquin');
 INSERT INTO `Cut_Maps` VALUES (10,'The Bayou',3,'overwatch.gamepedia.com/The_Bayou');
 INSERT INTO `Cut_Maps` VALUES (11,'The Iris',2,'overwatch.gamepedia.com/The_Iris_(map)');
-CREATE TABLE IF NOT EXISTS `Cut_Map_Kinds` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Cut_Map_Kinds` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT
 );
 INSERT INTO `Cut_Map_Kinds` VALUES (1,'Attack / Defend');
 INSERT INTO `Cut_Map_Kinds` VALUES (2,'Control point');
 INSERT INTO `Cut_Map_Kinds` VALUES (3,'Payload');
-CREATE TABLE IF NOT EXISTS `Cinematics` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Cinematics` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	INTEGER NOT NULL UNIQUE,
 	`link`	TEXT UNIQUE,
@@ -1231,7 +1231,7 @@ INSERT INTO `Cinematics` VALUES (7,'Dragons','youtu.be/oJ09xdxzIJQ',2016,18,17,N
 INSERT INTO `Cinematics` VALUES (8,'Alive','youtu.be/U130wnpi-C0',2016,28,23,NULL,NULL);
 INSERT INTO `Cinematics` VALUES (9,'Recall','youtu.be/sB5zlHMsM7k',2016,12,NULL,NULL,NULL);
 INSERT INTO `Cinematics` VALUES (10,'Reunion','youtu.be/PKYVvPNhRR0',2018,20,29,NULL,NULL);
-CREATE TABLE IF NOT EXISTS `Active_Event` (
+CREATE VIRTUAL TABLE IF NOT EXISTS `Active_Event` USING fts4 (
 	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
 	`name`	TEXT,
 	`event_id`	INTEGER
